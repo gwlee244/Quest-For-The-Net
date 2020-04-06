@@ -51,7 +51,7 @@ module.exports = (sequelize, Sequelize) => {
 
   User.associate = (models) => {
 
-    models.User.belongsTo(models.team, {
+    models.User.belongsTo(models.Team, {
         through: models.Match
     });
   };

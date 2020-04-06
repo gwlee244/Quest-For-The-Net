@@ -1,30 +1,77 @@
-// Requiring necessary npm packages
-var express = require("express");
-var session = require("express-session");
-// Requiring passport as we've configured it
-var passport = require("./config/passport");
+const express = require('express');
+const app = express();
+let passport = require('passport');
+let session = require('express-session');
+let bodyParser = require('body-parser');
+//let env = require('dotenv').load();
+let exphbs = require('express-handlebars');
 
-// Setting up port and requiring models for syncing
-var PORT = process.env.PORT || 8080;
-var db = require("./models");
+let PORT = process.env.PORT || 3000;
 
-// Creating express app and configuring middleware needed for authentication
-var app = express();
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+// BodyParser (Middleware)
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(express.static("public"));
-// We need to use sessions to keep track of our user's login status
-app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+
+// Passport
+app.use(session({
+    secret: 'keyboard cat',
+    resave: true, 
+    saveUninitialized: true
+})); // session secret
 app.use(passport.initialize());
-app.use(passport.session());
+app.use(passport.session()); // persistent login sessions
 
-// Requiring our routes
-require("./routes/html-routes.js")(app);
-require("./routes/api-routes.js")(app);
-
-// Syncing our database and logging a message to the user upon success
-db.sequelize.sync().then(function() {
-  app.listen(PORT, function() {
-    console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
-  });
+app.use( (req, res, next) => {
+    res.locals.isAuthenticated = req.isAuthenticated();
+    next();
 });
+
+// Handlebars
+app.set("views", "./views");
+app.engine("hbs", exphbs({
+    extname: ".hbs",
+    defaultLayout: "main"
+}));
+app.set("view engine", ".hbs");
+
+// Models
+let db = require("./models");
+
+// Routes
+//require("./routes/auth.js")(app,passport);
+ //require("./routes/api-routes")(app);
+// require("./routes/html-routes")(app);
+
+// Load passport strategies
+require("./config/passport.js")(passport, db.User);
+ 
+let syncOptions = { force: false };
+
+// If running a test, set syncOptions.force to true
+// clearing the `testdb`
+if (process.env.NODE_ENV === "test") {
+  syncOptions.force = true;
+}
+
+// Start Server - Sync Database & Models
+db.sequelize.sync(syncOptions).then( () => {
+    app.listen(PORT, (err) => {
+        if (!err)
+        console.log(`
+        \nSite is live 🌎
+        \nServer running on ${PORT}
+        \nDatabase looks good!
+        `);
+        else console.log(err)
+      });
+}).catch( (err) => {
+    console.log(err, "Something went wrong with the database update!")
+});
+
+module.exports = app;
+
+
+
+
+
