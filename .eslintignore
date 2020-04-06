@@ -1,2 +1,7 @@
 models/index.js
 node_modules
+passport.js
+user.js
+game.js
+team.js
+match.js
