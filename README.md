@@ -47,7 +47,7 @@ MIT: ![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgr
 **Asad**
 **Christian**
 **Nicholas**
-**Omar**
+**Omar** (OMAR)
 **Gene**
 
 Issues, Feature requests are most welcomed!. There are still issues and anyone can help to fixed the issues. Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
