@@ -57,7 +57,7 @@ Give a :star: or follow me if this project helped you.
 <img src="https://avatars1.githubusercontent.com/u/7818024?v=4" style="border-radius: 18px" width="30px" style = "border: 2px solid green" /> Email : [umiasad2017@gmail.com](asadrauf)
 
 
-<img src= "https://avatars1.githubusercontent.com/u/58318559?v=4" style="border-radius: 18px" width="30px" style = "border: 2px solid green" /> Email : [cas81695@gmail.com] (cas81695)
+<img src= "https://avatars1.githubusercontent.com/u/58318559?v=4" style="border-radius: 18px" width="30px" style = "border: 2px solid green" /> Email : [cas81695@gmail.com](cas81695)
 
 
 <img src= "https://avatars1.githubusercontent.com/u/55607961?v=4" style="border-radius: 18px" width="30px" style = "border: 2px solid green" /> Email : [gwlee244@gmail.com](gwlee244)
