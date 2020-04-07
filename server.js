@@ -3,7 +3,7 @@ const app = express();
 let passport = require('passport');
 let session = require('express-session');
 let bodyParser = require('body-parser');
-let env = require('dotenv').load();
+//let env = require('dotenv').load();
 let exphbs = require('express-handlebars');
 
 let PORT = process.env.PORT || 8080;
@@ -40,7 +40,7 @@ let db = require("./models");
 
 // Routes
 require("./routes/auth.js")(app,passport);
-//require("./routes/api-routes")(app);
+require("./routes/api-routes")(app);
 require("./routes/html-routes")(app);
 
 // Load passport strategies

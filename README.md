@@ -70,8 +70,3 @@ Give a :star: or follow me if this project helped you.
 <img src= "https://avatars1.githubusercontent.com/u/57764795?v=4" style="border-radius: 18px" width="30px" style = "border: 2px solid green" /> Email : [nicfinch223@gmail.com](Finch23)
 *This APP was generated with :heart: by Full Stack developer Asad Rauf, Nicholas Finch, Gene Lee, Omar Ibrahim, Christian Sanchez*
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
-
-
-
-
-
