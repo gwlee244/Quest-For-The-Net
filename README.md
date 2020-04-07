@@ -24,11 +24,15 @@ Implement test that are excetable to check our classes output
 ## Author
 **Asad Rauf**
 - Github : [@asadrauf](https://github.com/asadrauf)
+
+- Github : [@Finch23](https://github.com/Finch23)
+
 **Christian Sanchez**
 - Github : [@cas81695](https://github.com/cas81695)
 
 **Omar Ibrahim**
 - Github : [@abdallah723](https://github.com/abdallah723)
+
 
 ## License 
 MIT: ![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)
@@ -46,6 +50,6 @@ Give a :star: or follow me if this project helped you.
 <img src= "https://avatars1.githubusercontent.com/u/58318559?v=4" width ="200px" height="200px">
 [cas81695@gmail.com] (cas81695)
 
-*This APP was generated with :heart: by Full Stack developer Asad Rauf*
+*This APP was generated with :heart: by Full Stack developer Asad Rauf, Nicholas Finch, Gene Lee, Omar Ibrahim, Christian Sanchez*
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 
