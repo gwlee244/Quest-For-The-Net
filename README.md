@@ -25,6 +25,7 @@ Implement test that are excetable to check our classes output
 **Asad Rauf**
 - Github : [@asadrauf](https://github.com/asadrauf)
 
+**Nicholas Finch**
 - Github : [@Finch23](https://github.com/Finch23)
 
 **Christian Sanchez**
