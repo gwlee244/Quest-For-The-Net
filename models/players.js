@@ -83,12 +83,12 @@ module.exports = (sequelize, Sequelize) => {
 
     });
   
-    Player.associate = (models) => {
+    // Player.associate = (models) => {
   
-      models.Player.belongsTo(models.Team, {
-          through: models.Match
-      });
-    };
+    //   models.Player.belongsTo(models.Team, {
+    //       through: models.Match
+    //   });
+    // };
   
     Player.sync();
     return Player;
