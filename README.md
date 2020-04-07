@@ -24,6 +24,7 @@ Implement test that are excetable to check our classes output
 ## Author
 **Asad Rauf**
 - Github : [@asadrauf](https://github.com/asadrauf)
+- Github : [@Finch23](https://github.com/Finch23)
 
 ## License 
 MIT: ![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)
