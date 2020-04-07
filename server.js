@@ -3,10 +3,10 @@ const app = express();
 let passport = require('passport');
 let session = require('express-session');
 let bodyParser = require('body-parser');
-//let env = require('dotenv').load();
+let env = require('dotenv').load();
 let exphbs = require('express-handlebars');
 
-let PORT = process.env.PORT || 3000;
+let PORT = process.env.PORT || 5000;
 
 // BodyParser (Middleware)
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -39,9 +39,9 @@ app.set("view engine", ".hbs");
 let db = require("./models");
 
 // Routes
-//require("./routes/auth.js")(app,passport);
- //require("./routes/api-routes")(app);
-// require("./routes/html-routes")(app);
+require("./routes/auth.js")(app,passport);
+//require("./routes/api-routes")(app);
+require("./routes/html-routes")(app);
 
 // Load passport strategies
 require("./config/passport.js")(passport, db.User);
