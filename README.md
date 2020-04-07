@@ -71,3 +71,10 @@ Give a :star: or follow me if this project helped you.
 *This APP was generated with :heart: by Full Stack developer Asad Rauf, Nicholas Finch, Gene Lee, Omar Ibrahim, Christian Sanchez*
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> fbfe1021bf7692d68766a22fcaf4cc96aa1368a6
