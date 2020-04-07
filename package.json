@@ -24,7 +24,7 @@
     "fs": "0.0.1-security",
     "moment": "^2.22.2",
     "mysql": "^2.16.0",
-    "mysql2": "^1.6.1",
+    "mysql2": "^1.7.0",
     "node-sass": "^4.9.3",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
