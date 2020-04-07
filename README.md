@@ -24,6 +24,8 @@ Implement test that are excetable to check our classes output
 ## Author
 **Asad Rauf**
 - Github : [@asadrauf](https://github.com/asadrauf)
+**Christian Sanchez**
+- Github : [@cas81695](https://github.com/cas81695)
 
 **Omar Ibrahim**
 - Github : [@abdallah723](https://github.com/abdallah723)
@@ -34,12 +36,15 @@ MIT: ![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgr
 **Express** [![devDependencies Status](https://david-dm.org/dwyl/hapi-auth-jwt2/dev-status.svg)](https://david-dm.org/dwyl/hapi-auth-jwt2?type=dev)
 ## Contributing
 **Asad**
+**Christian**
 Issues, Feature requests are most welcomed!. There are still issues and anyone can help to fixed the issues. Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## Show your support :pray:
 Give a :star: or follow me if this project helped you.
 ### Any suggestion or question are most welcome
 <img src="https://avatars1.githubusercontent.com/u/7818024?v=4"  style="border-radius: 18px" width="30px" style = "border: 2px solid green" /> Email : [umiasad2017@gmail.com](asadrauf)
+<img src= "https://avatars1.githubusercontent.com/u/58318559?v=4" width ="200px" height="200px">
+[cas81695@gmail.com] (cas81695)
 
 *This APP was generated with :heart: by Full Stack developer Asad Rauf*
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
