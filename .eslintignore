@@ -2,3 +2,13 @@ models/index.js
 node_modules
 server.js
 players.js
+passport.js
+games.js
+api-routes.js
+userGame.js
+index.js
+user.js
+auth.js
+html-routes.js
+authContoller.js
+config.json
