@@ -5,7 +5,7 @@
       {{> game-navigation}}
         
         <div class="popup" id="popup">
-          <div class="popup__content">
+          <div class="popup-content">
             {{#if isAuthenticated}}
             <form class="add-game" action="api/games" method="POST">
 
@@ -26,7 +26,7 @@
 
               <div class="form__group">
                 <label for="max_players" class="form__label">Number of players</label>
-                <input type="number" class="form__input" id="max_players" name="max_players" placeholder="6-10" required>
+                <input type="number" class="form__input" id="max_players" name="max_players" placeholder="8-12" required>
               </div>
 
               <input class="btn btn--form" type="submit" value="Create Game"  />
@@ -53,10 +53,6 @@
                     </div>
 
                     <input class="btn btn--form" type="submit" value="Login" />
-
-
-                    {{!-- <p class="paragraph">Not registed? <a href="/signup">Sign up</a></p> --}}
-
                     </form>
                 </div>
                 <div class="col-1-of-2">
