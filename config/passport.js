@@ -1,18 +1,18 @@
   // Load bcrypt
-  var bCrypt = require('bcrypt-nodejs');
+  const bCrypt = require('bcrypt-nodejs');
 
   module.exports = function(passport, user) {
 
-  var userInfo = user;
-  var LocalStrategy = require('passport-local').Strategy;
+  let User = user;
+  const LocalStrategy = require('passport-local').Strategy;
 
-  passport.serializeUser((user, done) => {
+  passport.serializeUser( (user, done) => {
     done(null, user.id);
   });
 
   // Used to deserialize the user
   passport.deserializeUser( (id, done) => {
-    userInfo.findById(id).then( (user) => {
+    User.findById(id).then( (user) => {
       if(user){
         done(null, user.get());
       }
@@ -35,7 +35,7 @@
         return bCrypt.hashSync(password, bCrypt.genSaltSync(8), null);
       };
       
-      userInfo.findOne({
+      User.findOne({
         where: {
           email: email
         }
@@ -54,7 +54,7 @@
             lastname: req.body.lastname
           };
           
-          userInfo.create(data).then( (newUser, created) => {
+          User.create(data).then( (newUser, created) => {
             if(!newUser) {
               return done(null,false);
             }
@@ -78,13 +78,13 @@
     
     (req, email, password, done) => {
 
-    let userInfo = user;
+    let User = user;
 
     let isValidPassword = (userpass,password) => {
       return bCrypt.compareSync(password, userpass);
     }
     
-    userInfo.findOne({
+    User.findOne({
       where : { 
         email: email
       }
@@ -96,8 +96,8 @@
         return done(null, false, { message: 'Incorrect password.' });
       }
       
-      let userData = user.get();
-      return done(null,userData);
+      let userinfo = user.get();
+      return done(null,userinfo);
     
     }).catch( (err) => {
       
