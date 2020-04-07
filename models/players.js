@@ -85,10 +85,11 @@ module.exports = (sequelize, Sequelize) => {
   
     // Player.associate = (models) => {
   
-    //   models.Player.belongsTo(models.Team, {
-    //       through: models.Match
-    //   });
-    // };
+
+    //   models.Player.belongsTo(models.Game, {
+    //       through: models.UserGame
+
+  
   
     Player.sync();
     return Player;
