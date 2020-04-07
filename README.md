@@ -1,20 +1,43 @@
-# Project 2
 
-[https://floating-headland-56018.herokuapp.com/](https://floating-headland-56018.herokuapp.com/)
+ ![](mainpage.png)
+ 
+### Projects-2 ![Maintained](https://img.shields.io/badge/burger-yellowgreen) ![Maintained](https://img.shields.io/badge/UNC-bootCamp-blue)
 
-## Getting Started
+> ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) #Project-2 with MySQL, Node, Express, Handlebars and sequelize with sass. Using MVC design pattern.  Node and MySQL to query and route data in your app, and Handlebars to generate your HTML.
 
-* Login to create a player card
-* First name must be between 1-14 characters
-* Last name must be between 1-15 characters
+These are the programming languages that we used to built this good developer profile generator
+**node.js javascript OOP node modules express api and html routing and mysql**
 
-* Once logged in you can create a game
-* Number of players must be between 6-10
-* Location must be between 1-16 characters
+
+![Project Version](https://img.shields.io/badge/Version-version1.1-blue)  ![Documentation](https://img.shields.io/badge/Documentation-Yes-yellowgreen) ![Maintained](https://img.shields.io/badge/Maintained-Yes-yellowgreen)  ![License](https://img.shields.io/badge/License-MIT-green)
+
+**This is a BasketBall application**
+
+## Install  ![Maintained](https://img.shields.io/badge/npm-install-red)
+npm install
+npm install will download a package and it's dependencies. npm install can be run with or without arguments. When run without arguments, npm install downloads dependencies defined in a package.json file and generates a node_modules folder with the installed modules
+
+## Run Tests  ![Maintained](https://img.shields.io/badge/npm-test-red)
+test
+Implement test that are excetable to check our classes output
 
 ## Author
+**Asad Rauf**
+- Github : [@asadrauf](https://github.com/asadrauf)
 
-* [Alexander Beal](https://github.com/alexanderjbeal)
-* [Michael Surface](https://github.com/msurface)
-* [Brett Gonterman](https://github.com/bagonterman)
-* [Charles Welch](https://github.com/cmattrox)
+## License 
+MIT: ![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)
+---
+**Express** [![devDependencies Status](https://david-dm.org/dwyl/hapi-auth-jwt2/dev-status.svg)](https://david-dm.org/dwyl/hapi-auth-jwt2?type=dev)
+## Contributing
+**Asad**
+Issues, Feature requests are most welcomed!. There are still issues and anyone can help to fixed the issues. Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## Show your support :pray:
+Give a :star: or follow me if this project helped you.
+### Any suggestion or question are most welcome
+<img src="https://avatars1.githubusercontent.com/u/7818024?v=4"  style="border-radius: 18px" width="30px" style = "border: 2px solid green" /> Email : [umiasad2017@gmail.com](asadrauf)
+
+*This APP was generated with :heart: by Full Stack developer Asad Rauf*
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
+
