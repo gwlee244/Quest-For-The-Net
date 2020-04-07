@@ -1,7 +1,7 @@
 {
     "development": {
         "username": "root",
-        "password": "sqlroot321",
+        "password": "Project_3psilon",
         "database": "sequelize_basketball",
         "host": "127.0.0.1",
         "port": 3306,
