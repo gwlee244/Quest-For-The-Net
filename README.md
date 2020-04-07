@@ -55,9 +55,17 @@ Issues, Feature requests are most welcomed!. There are still issues and anyone c
 Give a :star: or follow me if this project helped you.
 ### Any suggestion or question are most welcome
 <img src="https://avatars1.githubusercontent.com/u/7818024?v=4" style="border-radius: 18px" width="30px" style = "border: 2px solid green" /> Email : [umiasad2017@gmail.com](asadrauf)
+
+
 <img src= "https://avatars1.githubusercontent.com/u/58318559?v=4" style="border-radius: 18px" width="30px" style = "border: 2px solid green" /> Email : [cas81695@gmail.com] (cas81695)
+
+
 <img src= "https://avatars1.githubusercontent.com/u/55607961?v=4" style="border-radius: 18px" width="30px" style = "border: 2px solid green" /> Email : [gwlee244@gmail.com](gwlee244)
+
+
 <img src= "https://avatars1.githubusercontent.com/u/57788908?v=4" style="border-radius: 18px" width="30px" style = "border: 2px solid green" /> Email : [ibrham11@gmail.com](abdallah723)
+
+
 <img src= "https://avatars1.githubusercontent.com/u/57764795?v=4" style="border-radius: 18px" width="30px" style = "border: 2px solid green" /> Email : [nicfinch223@gmail.com](Finch23)
 *This APP was generated with :heart: by Full Stack developer Asad Rauf, Nicholas Finch, Gene Lee, Omar Ibrahim, Christian Sanchez*
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
