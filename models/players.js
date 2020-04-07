@@ -27,14 +27,14 @@ module.exports = (sequelize, Sequelize) => {
         },
   
         pointspergame: {
-            type: Sequelize.INTEGER,
+            type: Sequelize.DECIMAL,
             notEmpty: true,
             validate: {
                 len: [1]
             }
         },
         freethrowpercent: {
-            type: Sequelize.INTEGER,
+            type: Sequelize.DECIMAL,
             notEmpty: true,
             validate: {
                 len: [1]
@@ -42,7 +42,7 @@ module.exports = (sequelize, Sequelize) => {
         },
   
         steals: {
-            type: Sequelize.INTEGER,
+            type: Sequelize.DECIMAL,
             notEmpty: true,
             validate: {
                 len: [1]
@@ -50,7 +50,7 @@ module.exports = (sequelize, Sequelize) => {
         },
 
         rebounds: {
-            type: Sequelize.INTEGER,
+            type: Sequelize.DECIMAL,
             notEmpty: true,
             validate: {
                 len: [1]
@@ -58,7 +58,7 @@ module.exports = (sequelize, Sequelize) => {
         },
 
         blocks: {
-            type: Sequelize.INTEGER,
+            type: Sequelize.DECIMAL,
             notEmpty: true,
             validate: {
                 len: [1]
@@ -66,7 +66,7 @@ module.exports = (sequelize, Sequelize) => {
         },
 
         assists: {
-            type: Sequelize.INTEGER,
+            type: Sequelize.DECIMAL,
             notEmpty: true,
             validate: {
                 len: [1]
@@ -74,7 +74,7 @@ module.exports = (sequelize, Sequelize) => {
         },
 
         overallstats: {
-            type: Sequelize.INTEGER,
+            type: Sequelize.DECIMAL,
             notEmpty: true,
             validate: {
                 len: [1]
