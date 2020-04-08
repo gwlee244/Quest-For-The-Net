@@ -19,7 +19,7 @@ module.exports = (sequelize, Sequelize) => {
         },
   
         positionname: {
-            type: Sequelize.TEXT,
+            type: Sequelize.STRING,
             notEmpty: true,
             validate: {
                 len: [1]
@@ -27,22 +27,31 @@ module.exports = (sequelize, Sequelize) => {
         },
   
         pointspergame: {
-            type: Sequelize.DECIMAL,
+            type: Sequelize.DECIMAL (5,1),
             notEmpty: true,
             validate: {
                 len: [1]
             }
         },
+
+        fieldgoal: {
+            type: Sequelize.DECIMAL (5,1),
+            notEmpty: true,
+            validate: {
+                len: [1]
+            }
+        },
+
+        threepoint: {
+            type: Sequelize.DECIMAL (5,1),
+            notEmpty: true,
+            validate: {
+                len: [1]
+            }
+        },
+
         freethrowpercent: {
-            type: Sequelize.DECIMAL,
-            notEmpty: true,
-            validate: {
-                len: [1]
-            }
-        },
-  
-        steals: {
-            type: Sequelize.DECIMAL,
+            type: Sequelize.DECIMAL (5,1),
             notEmpty: true,
             validate: {
                 len: [1]
@@ -50,15 +59,7 @@ module.exports = (sequelize, Sequelize) => {
         },
 
         rebounds: {
-            type: Sequelize.DECIMAL,
-            notEmpty: true,
-            validate: {
-                len: [1]
-            }
-        },
-
-        blocks: {
-            type: Sequelize.DECIMAL,
+            type: Sequelize.DECIMAL (5,1),
             notEmpty: true,
             validate: {
                 len: [1]
@@ -66,15 +67,33 @@ module.exports = (sequelize, Sequelize) => {
         },
 
         assists: {
-            type: Sequelize.DECIMAL,
+            type: Sequelize.DECIMAL (5,1),
+            notEmpty: true,
+            validate: {
+                len: [1]
+            }
+        },
+  
+        steals: {
+            type: Sequelize.DECIMAL (5,1),
             notEmpty: true,
             validate: {
                 len: [1]
             }
         },
 
+
+        blocks: {
+            type: Sequelize.DECIMAL (5,1),
+            notEmpty: true,
+            validate: {
+                len: [1]
+            }
+        },
+
+
         overallstats: {
-            type: Sequelize.DECIMAL,
+            type: Sequelize.DECIMAL (5,1),
             notEmpty: true,
             validate: {
                 len: [1]
