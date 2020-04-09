@@ -2,7 +2,7 @@
     "development": {
         "username": "root",
 
-        "password": "sqlroot321",
+        "password": "12345",
         "database": "ball_n_ball_db",
         "host": "localhost",
         "port": 3306,

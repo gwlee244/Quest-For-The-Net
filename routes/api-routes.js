@@ -11,7 +11,6 @@ module.exports = function(app) {
       res.render('players', {
         error: err
       });
-      
     });
 });
 }
