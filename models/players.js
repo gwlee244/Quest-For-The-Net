@@ -98,9 +98,15 @@ module.exports = (sequelize, Sequelize) => {
             validate: {
                 len: [1]
             }
-        }
+        },
+        
+ 
 
-    });
+    },
+    {
+    timestamps: false
+    }
+    );
   
     // Player.associate = (models) => {
   
@@ -108,7 +114,7 @@ module.exports = (sequelize, Sequelize) => {
     //   models.Player.belongsTo(models.Game, {
     //       through: models.UserGame
 
-  
+    
   
     Player.sync();
     return Player;
