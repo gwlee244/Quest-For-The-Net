@@ -2,8 +2,8 @@ var db = require("../models");
 
 module.exports = function(app) {
  app.get("/api/all", (req, res) => {
-    db.User.findAll({
-      include: [db.Game],
+    db.Player.findAll({
+     // include: [db.Game],
       order: [ ["lastname", "DESC"] ]
     }).then( (dbPlayers) => {
       res.json(dbPlayers);
@@ -13,4 +13,6 @@ module.exports = function(app) {
       });
     });
 });
+
+
 }
