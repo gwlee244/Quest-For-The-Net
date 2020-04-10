@@ -2,7 +2,7 @@ var db = require("../models");
 
 module.exports = function(app) {
  app.get("/api/all", (req, res) => {
-    db.Player.findAll({
+    db.User.findAll({
      // include: [db.Game],
       order: [ ["lastname", "DESC"] ]
     }).then( (dbPlayers) => {
