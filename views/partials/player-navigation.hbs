@@ -21,16 +21,17 @@
         {{/unless}}
     </div>
     <div class="team-container">
-      <div class="col-md-6 text-center">
+    <div class="row-players">
+      <div class="available col-md-6 text-center">
       <h2>Players Available</h2> 
       <ul class="burgers">
             {{#each players}} 
-                {{#unless this.devoured}}
+                {{#unless this.picked}}
             <li>    
                 {{this.firstname}}  
                 <form method="POST" action="/players/{{this.id}}?_method=PUT">
-                    <input type="hidden" name="devoured" value="true">
-                    <button type="submit" name="burgerId" class="btn btn-danger center-block off-set-70">Devour it!</button>
+                    <input type="hidden" name="picked" value="true">
+                    <button type="submit" name="addToRoster" class="btn btn-danger center-block off-set-70">Add to Team</button>
                 </form>
                 <hr>
             </li>
@@ -39,16 +40,16 @@
         </ul>
       </div>
     </div>
-    <div class="col-md-6 text-center">
+    <div class="addedPlayers col-md-6 text-center">
         <h2>Team Roster</h2> 
         {{#each players}} 
-            {{#if this.devoured}}
-        <ul class="devoured-burgers">
+            {{#if this.picked}}
+        <ul class="picked-player">
             <li>
                 {{this.firstname}}
                 <form method="POST" action="/players/{{this.id}}?_method=PUT">
-                    <input type="hidden" name="devoured" value="false">
-                    <button type="submit" name="burgerId" class="btn btn-primary center-block off-set-70">Eat Again </button>
+                    <input type="hidden" name="picked" value="false">
+                    <button type="submit" name="remove" class="btn btn-primary center-block off-set-70">Remove Player</button>
                 </form>
             </li>
             <hr>
