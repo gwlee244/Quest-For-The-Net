@@ -83,6 +83,9 @@ $(".players-container").on("click", ".addbtn", function(event) {
                 url: "/api/players/" + id
               })
                 .done(function(response) {
+
+                window.location.reload();
+
                   //getPosts(postCategorySelect.val());
                     console.log("response", response);
                     location.reload();
