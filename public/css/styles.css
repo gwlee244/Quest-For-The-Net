@@ -278,17 +278,17 @@ body {
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 30rem;
+  height: 25rem;
   margin-bottom: 3rem;
   z-index: 1000; }
   .game-card__side {
     font-size: 2rem;
-    height: 30rem;
+    height: 25rem;
     transition: all .8s ease;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 80%;
     backface-visibility: hidden;
     border-radius: 3px;
     overflow: hidden;
@@ -968,4 +968,46 @@ body {
        letter-spacing: -.2rem;
      }
 
+     .game-details {
+      color: #fff;
+      text-transform: uppercase;
+      text-align: center;
+      display: block;
+      width: 100%; }
+      .game-details--main {
+        color: #fff;
+        font-size: 5rem;
+        font-weight: 700;
+        letter-spacing: -.2rem; }
+      .game-details--sub {
+        font-size: 1.1rem;
+        letter-spacing: .3rem;
+        padding-left: 1rem;
+        color: #777; }
+      .game-details--icon {
+        font-size: 1.1rem;
+        letter-spacing: .3rem;
+        padding-left: 1rem; }
+      .game-details--name {
+        font-size: 1.1rem;
+        letter-spacing: .3rem;
+        padding-left: 1rem; }
+        @media (max-width: 37.5em) {
+          .game-details--name {
+            font-size: 1.8rem; } }
+      .game-details--location {
+        color: #fff;
+        font-size: 4rem;
+        font-weight: 700;
+        letter-spacing: -.1rem; }
     
+    .icon {
+      color: #fff; }
+    
+    .icon-back {
+      color: #fff;
+      padding-top: 1.5rem; }
+
+      .card-back-button{
+        padding: -5rem;
+      }
