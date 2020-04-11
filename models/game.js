@@ -40,6 +40,7 @@ module.exports = (sequelize, Sequelize) => {
     // A Game can't be created without a User due to the foreign key constraint
     models.Game.belongsToMany(models.User, {
       through: models.UserGame
+     
     })
   };
   Game.sync();

@@ -56,9 +56,7 @@
                 url: "/api/players/" + id
               })
                 .done(function(response) {
-                  //getPosts(postCategorySelect.val());
-                    //console.log("response", response);
-                    window.location.reload();
+                window.location.reload();
                 });
                 
         })
