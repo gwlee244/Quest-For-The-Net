@@ -52,9 +52,11 @@
                                 <span class="game-details game-details--icon">Join</span>
                                 <span class="game-details game-details--icon"><i class="fas fa-user-plus fa-4x icon-back"></i></span>
                             </div>
-                            <button class="btn btn--form card-back-button">Delete</a>
+                            
                         </div>
+                        <button class="remove btn btn-danger" data-id="${data[i].id}">delete</button>
                     </div>
+                    
                 </div>
             </div>
             `);
@@ -62,6 +64,21 @@
         }
         }
     });
+
+    $(".games-container").on("click",".remove", function(event) {
+        event.preventDefault();
+        const id = $(event.target).data("id");
+        console.log(id);
+        $.ajax({
+            method: "DELETE",
+            url: "/api/games/" + id
+          })
+            .done(function(response) {
+                
+            window.location.reload();
+            });
+            
+    })
 
 
 
