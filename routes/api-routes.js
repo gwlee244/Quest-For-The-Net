@@ -14,7 +14,7 @@ module.exports = function(app) {
     });
 });
 
-app.put('/api/players/:id', function(request, response) {
+app.put('/api/players/:id', function(request, res) {
   db.Player.update(
 
       {
