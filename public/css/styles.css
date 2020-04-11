@@ -1011,3 +1011,13 @@ body {
       .card-back-button{
         padding: -5rem;
       }
+
+      .btn-danger{
+        background-color: #000;
+        background-image: linear-gradient(to right bottom, #25abf8, #55c57a);
+        
+       font-weight: 700;
+       letter-spacing: -.1rem;
+      }
+
+     
