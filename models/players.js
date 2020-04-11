@@ -1,3 +1,5 @@
+
+
 module.exports = (sequelize, Sequelize) => {
 
     const Player = sequelize.define('Player', {
@@ -100,7 +102,10 @@ module.exports = (sequelize, Sequelize) => {
             }
         },
         
- 
+        devoured: {
+            type: Sequelize.BOOLEAN,
+            defaultValue: 0
+        },
 
     },
     {
