@@ -52,7 +52,7 @@
                                 <span class="game-details game-details--icon">Join</span>
                                 <span class="game-details game-details--icon"><i class="fas fa-user-plus fa-4x icon-back"></i></span>
                             </div>
-                            <button class="btn btn--form ">Delete</a>
+                            <button class="btn btn--form card-back-button">Delete</a>
                         </div>
                     </div>
                 </div>
