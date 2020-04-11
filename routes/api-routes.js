@@ -65,7 +65,6 @@ app.get('/api/games', (req, res) => {
     // promises in the chain.
   });
 });
-
 // POST route for creating a new game
 app.post("/api/games", function(req, res) {
   db.Game.create({
@@ -83,7 +82,6 @@ app.post("/api/games", function(req, res) {
     // promises in the chain.
   });
 });
-
 // POST route for creating userGames
 // NEWEST ROUTE
 app.post("/api/games", function(req, res) {
@@ -100,28 +98,22 @@ app.post("/api/games", function(req, res) {
         // promises in the chain.
       });
   });
-
-
 // Checking to see if there are players in a game.
 // Updating the game table to full if there are enough players
 // Adding a player to a userGame if not full.
 //still in progress
-
 app.get("/api/games", (req, res) => {
   db.UserGame.findAll({
       include: [db.Game, db.User],
       where: {
           GameId: req.params.GameId,
           UserId: req.params.UserId,
-
       }
   }).then(function(currentPlayers) {
       res.json(currentPlayers);
-
       if (currentPlayers.length >= maxPlayers) {
           //could change this alert to whatever
           alert("Game is Full. Please join another.");
-
           //query to 
               db.Game.update({
                   max_players: {
@@ -131,7 +123,6 @@ app.get("/api/games", (req, res) => {
                   res.json(updateMaxPlayers);
               });
           } else {
-
               app.put("/api/games", function(req, res) {
                   db.UserGame.update({
                       where:{
@@ -147,7 +138,6 @@ app.get("/api/games", (req, res) => {
       }
   )
 });
-
 app.delete('/api/games/:id', function(request, res) {
   db.Game.destroy(
       {
@@ -162,6 +152,5 @@ app.delete('/api/games/:id', function(request, res) {
     res.status(401).json(err);
   })
 });
-
-
 }
+

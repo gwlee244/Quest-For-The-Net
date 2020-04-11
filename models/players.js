@@ -102,7 +102,7 @@ module.exports = (sequelize, Sequelize) => {
             }
         },
         
-        devoured: {
+        picked: {
             type: Sequelize.BOOLEAN,
             defaultValue: 0
         },
