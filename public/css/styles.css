@@ -109,7 +109,7 @@ body {
     transform: skewY(1deg) skewX(3deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
-.btn, .btn:link, .btn:visited {
+.btn-click, .btn-click:link, .btn-click:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -122,12 +122,12 @@ body {
   border: none;
   cursor: pointer; }
 
-.btn:hover {
+.btn-click:hover {
   transform: translateY(-3px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   /* x, y, blur */ }
 
-.btn:active, .btn:focus {
+.btn-click:active, .btn-click:focus {
   outline: none;
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
@@ -147,7 +147,6 @@ body {
 .btn--header {
   display: block !important;
   width: 100%;
-  background-color: #007CC2;
   color: white;
   animation: moveInBottom 1.5s ease; }
   .btn--header::after {
@@ -1019,5 +1018,42 @@ body {
        font-weight: 700;
        letter-spacing: -.1rem;
       }
+
+      #addedPlayers {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      
+
+        .btn-click__home, .btn-click__home:link, .btn-click__home:visited {
+          background-image: linear-gradient(to right, #007CC2, #fdaf1d);
+          text-transform: uppercase;
+          text-decoration: none;
+          padding: 1.5rem 4rem;
+          display: inline-block;
+          border-radius: 10rem;
+          transition: all .2s;
+          position: relative;
+          font-size: 1.4rem;
+          letter-spacing: .1rem;
+          border: none;
+          cursor: pointer; }
+        
+        .btn-click__home:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+          /* x, y, blur */ }
+        
+        .btn-click__home:active, .btn-click__home:focus {
+          outline: none;
+          transform: translateY(-1px);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+        
+      
+
+      
+
+     
 
      

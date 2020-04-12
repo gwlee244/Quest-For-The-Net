@@ -2,45 +2,45 @@
         {{#if isAuthenticated}}
         <ul>
             <li>
-                <span class="heading-nav">Players</span>
+                <span class="heading-main">Players</span>
             </li>
-            <li><a href="/games" class="btn btn-color">Games</a></li>
-            <li><a href="/index" class="btn btn-color">Home</a></li>
+            <li><a href="/games" class="btn-click btn-color">Games</a></li>
+            <li><a href="/index" class="btn-click btn-color">Home</a></li>
         </ul>
         {{/if}}
 
         {{#unless isAuthenticated}}
         <ul>
             <li>
-                <span class="heading-nav">Players</span>
+                <span class="heading-main">Players</span>
             </li>
-            <li><a href="#popup" class="btn btn-color">Login</a></li>
-            <li><a href="/games" class="btn btn-color">Games</a></li>
-            <li><a href="/index" class="btn btn-color">Home</a></li>
+            <li><a href="#popup" class="btn-click btn-color">Login</a></li>
+            <li><a href="/games" class="btn-click btn-color">Games</a></li>
+            <li><a href="/index" class="btn-click btn-color">Home</a></li>
         </ul>
         {{/unless}}
     </div>
-    <div class="team-container">
-    <div class="row-players">
-      <div class="available col-md-6 text-center">
+    
+    
+    <div class="row">
+    <div class="available col-md-6">
       <h2>Players Available</h2> 
-      <ul class="burgers">
+      <ul class="players">
             {{#each players}} 
                 {{#unless this.picked}}
             <li>    
                 {{this.firstname}}  
                 <form method="POST" action="/players/{{this.id}}?_method=PUT">
                     <input type="hidden" name="picked" value="true">
-                    <button type="submit" name="addToRoster" class="btn btn-danger center-block off-set-70">Add to Team</button>
+                    <button type="submit" name="addToRoster" class="btn-click btn-danger">Add to Team</button>
                 </form>
-                <hr>
+                
             </li>
                 {{/unless}} 
             {{/each}}
         </ul>
       </div>
-    </div>
-    <div class="addedPlayers col-md-6 text-center">
+    <div class="addedPlayers col-md-6">
         <h2>Team Roster</h2> 
         {{#each players}} 
             {{#if this.picked}}
@@ -49,15 +49,16 @@
                 {{this.firstname}}
                 <form method="POST" action="/players/{{this.id}}?_method=PUT">
                     <input type="hidden" name="picked" value="false">
-                    <button type="submit" name="remove" class="btn btn-primary center-block off-set-70">Remove Player</button>
+                    <button type="submit" name="remove" class="btn-click btn-primary">Remove Player</button>
                 </form>
             </li>
-            <hr>
+            
         </ul>
             {{/if}} 
         {{/each}}
     </div>
-
+    </div>
+    
     <div class="popup" id="popup">
           <div class="popup-content">
             {{#if isAuthenticated}}
@@ -80,7 +81,7 @@
                         <input type="password" class="form__input" id="password" name="password" required>
                     </div>
 
-                    <input class="btn btn--form" type="submit" value="Login" />
+                    <input class="btn-click btn--form" type="submit" value="Login" />
 
                     </form>
                 </div>
@@ -107,7 +108,7 @@
                 <input name="password" class="form__input" type="password" required/>
               </div>
               
-              <input class="btn btn--form" type="submit" value="Register" />
+              <input class="btn-click btn--form" type="submit" value="Register" />
 
             </form>
 

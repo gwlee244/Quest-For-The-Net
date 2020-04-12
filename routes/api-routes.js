@@ -18,7 +18,7 @@ app.put('/api/players/:id', function(request, res) {
   db.Player.update(
 
       {
-          add: request.body.devoured
+          picked: request.body.devoured
       },
 
       {
