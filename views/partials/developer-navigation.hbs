@@ -1,40 +1,36 @@
-<div class="navigation" id="navigation">
-
-    <input type="checkbox" class="navigation-checkbox" id="navi-toggle">
-     
-    <label for="navi-toggle" class="navigation__button">
-         <span class="navigation-icon">&nbsp;</span>
-    </label>
-    
-    <div class="popup-background">
-        &nbsp;
-    </div>
-    
-    <nav class="navigation-nav">
-        <ul class="navigation-list">
-            {{#if isAuthenticated}}
-            <li class="navigation-item"><a href="/index" class="navigation-link">Home</a></li>
-            <li class="navigation-item"><a href="/developer" class="navigation-link">Developers</a></li>
-            <li class="navigation-item"><a href="/games" class="navigation-link">Matches</a></li>
-            <li class="navigation-item"><a href="/players" class="navigation-link">Players</a></li>
-            <li class="navigation-item"><a href="/logout" class="navigation-link">Logout</a></li>
-            {{/if}}
-            {{#unless isAuthenticated}}
-            <li class="navigation-item"><a href="/index" class="navigation-link">Home</a></li>
-            <li class="navigation-item"><a href="/games" class="navigation-link">Matches</a></li>
-            <li class="navigation-item"><a href="/players" class="navigation-link">Players</a></li>
-            <li class="navigation-item"><a href="#popup-nav" class="navigation-link">Login</a></li>
-            {{/unless}}
+    <div class="page-navigation__menu">
+        {{#if isAuthenticated}}
+        <ul>
+            <li>
+                <span class="heading-main">Players</span>
+            </li>
+            <li><a href="/games" class="btn-click btn-color">Games</a></li>
+            <li><a href="/index" class="btn-click btn-color">Home</a></li>
         </ul>
-    </nav>
+        {{/if}}
 
+        {{#unless isAuthenticated}}
+        <ul>
+            <li>
+                <span class="heading-main">Players</span>
+            </li>
+            <li><a href="#popup" class="btn-click btn-color">Login</a></li>
+            <li><a href="/games" class="btn-click btn-color">Games</a></li>
+            <li><a href="/index" class="btn-click btn-color">Home</a></li>
+        </ul>
+        {{/unless}}
+    </div>
 
-    <div class="popup" id="popup-nav">
-        <div class="popup-content">
+     <div class="popup" id="popup">
+          <div class="popup-content">
+            {{#if isAuthenticated}}
+            
+            {{/if}}
 
-            <div class="row">
+            {{#unless isAuthenticated}}
+
+              <div class="row">
                 <div class="col-1-of-2">
-
                     <form id="signin" class="form" name="signin" method="post" action="signin">
                     
                     <div class="form__group">
@@ -48,10 +44,10 @@
                     </div>
 
                     <input class="btn-click btn--form" type="submit" value="Login" />
+
                     </form>
                 </div>
                 <div class="col-1-of-2">
-
                     <form id="signup" name="signup" method="post" action="/signup">
 
               <div class="form__group">
@@ -81,12 +77,10 @@
                     
                 </div>
             </div>
+            
           
-           
+            {{/unless}}
 
-            <a href="#navigation" class="popup__close">&times;</a>
-
+            <a href="#team-players" class="popup__close">&times;</a>
+          </div>
         </div>
-    </div>
-
-</div>

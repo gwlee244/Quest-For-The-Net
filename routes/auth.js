@@ -28,6 +28,8 @@ module.exports = function(app, passport) {
     app.get('/index', authController.index);
     app.get('/games', authController.games);
     app.get('/players', authController.players);
+    app.get('/developer', authController.developer);
+
 
     function isLoggedIn(req, res, next) {
         if (req.isAuthenticated())
