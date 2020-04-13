@@ -1,7 +1,7 @@
 $.get("/api/developer", (data) => {
-    if (data.length !== 0) {
-        for (var i = 0; i < data.length; i++) {
-        let card = $(`
+  if (data.length !== 0) {
+    for (var i = 0; i < data.length; i++) {
+      let card = $(`
         
             <div class="col-1-of-3">
             <div class="developer-card">
@@ -27,7 +27,7 @@ $.get("/api/developer", (data) => {
                 </div>
                 
         `);
-         $(".developer-container").prepend(card);
-        }
+      $(".developer-container").prepend(card);
     }
-    });
+  }
+});

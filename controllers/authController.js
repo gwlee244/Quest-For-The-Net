@@ -1,37 +1,37 @@
 
-var exports = module.exports = {}
+var exports = module.exports = {};
 
- 
+
 exports.signup = function(req, res) {
-    res.render('signup');
-}
+  res.render("signup");
+};
 
 exports.signin = function(req, res) {
-    res.render('signin');
-}
+  res.render("signin");
+};
 
 exports.dashboard = function(req, res) {
-    res.render('dashboard');
-}
+  res.render("dashboard");
+};
 
 exports.logout = function(req, res) {
-    req.session.destroy(function(err) {
-        res.redirect('/index');
-    });
-}
+  req.session.destroy(function(err) {
+    res.redirect("/index");
+  });
+};
 
 exports.index = function(req, res) {
-    res.render('index');
-}
+  res.render("index");
+};
 
 exports.games = function(req, res) {
-    res.render('games');
-}
+  res.render("games");
+};
 
 exports.players = function(req, res) {
-    res.render('players');
-}
+  res.render("players");
+};
 
 exports.developer = function(req, res) {
-    res.render('developer');
-}
+  res.render("developer");
+};
