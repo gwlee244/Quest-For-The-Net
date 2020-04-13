@@ -4,6 +4,7 @@
         for (var i = 0; i < data.length; i++) {
             let card = $(`
             <div class="col-1-of-2">
+            <button class="remove btn btn-danger" data-id="${data[i].id}">Delete</button>
                 <div class="game-card">
                     <div class="game-card__side game-card__side--front">
 
@@ -54,10 +55,11 @@
                             </div>
                             
                         </div>
-                        <button class="remove btn btn-danger" data-id="${data[i].id}">delete</button>
+                        
                     </div>
-                    
+                     
                 </div>
+                
             </div>
             `);
             $(".games-container").prepend(card);
