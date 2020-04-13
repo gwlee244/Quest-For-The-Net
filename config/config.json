@@ -3,12 +3,17 @@
     "development": {
         "username": "root",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         "password": "12345678",
 =======
         "password": "",
 >>>>>>> master
         "database": "sequelize_basketball",
+=======
+        "password": "sqlroot321",
+        "database": "ball_n_ball_db",
+>>>>>>> master
         "host": "localhost",
         "port": 3306,
         "dialect": "mysql"

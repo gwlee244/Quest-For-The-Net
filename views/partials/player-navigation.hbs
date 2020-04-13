@@ -4,7 +4,7 @@
             <li>
                 <span class="heading-main">Players</span>
             </li>
-            <li><a href="/games" class="btn-click btn-color">Games</a></li>
+            <li><a href="/games" class="btn-click btn-color">Matches</a></li>
             <li><a href="/index" class="btn-click btn-color">Home</a></li>
         </ul>
         {{/if}}
@@ -22,12 +22,13 @@
     </div>
     
     
-    <div class="row">
+    <div class="row fix">
     <div class="available col-md-6">
-      <h2>Players Available</h2> 
-      <ul class="players">
+      <h2 class="heading-main-2">Players Available</h2> 
+      
             {{#each players}} 
                 {{#unless this.picked}}
+                <ul class="players">
             <li>    
                 {{this.firstname}}  
                 <form method="POST" action="/players/{{this.id}}?_method=PUT">
@@ -36,12 +37,13 @@
                 </form>
                 
             </li>
+             </ul>
                 {{/unless}} 
             {{/each}}
-        </ul>
+       
       </div>
     <div class="addedPlayers col-md-6">
-        <h2>Team Roster</h2> 
+        <h2 class="heading-main-2">Team Roster</h2> 
         {{#each players}} 
             {{#if this.picked}}
         <ul class="picked-player">
