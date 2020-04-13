@@ -125,6 +125,7 @@ $.get("/api/all", (data) => {
             </div>
         `);
          $(".available").prepend(card);
+        //  $(".developer-container").prepend(card);
         }
     }
     });
