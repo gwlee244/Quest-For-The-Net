@@ -31,3 +31,7 @@ exports.games = function(req, res) {
 exports.players = function(req, res) {
     res.render('players');
 }
+
+exports.developer = function(req, res) {
+    res.render('developer');
+}

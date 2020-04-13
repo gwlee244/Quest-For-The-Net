@@ -152,5 +152,19 @@ app.delete('/api/games/:id', function(request, res) {
     res.status(401).json(err);
   })
 });
-}
 
+app.get("/api/developer", (req, res) => {
+  db.Developer.findAll({
+   // include: [db.Game],
+    order: [ ["names", "DESC"] ]
+  }).then( (dbDeveloper) => {
+    res.json(dbDeveloper);
+  }).catch((err) => {
+    res.render('Developers', {
+      error: err
+    });
+  });
+});
+
+
+}
