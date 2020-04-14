@@ -18,19 +18,14 @@ if (data.length !== 0) {
                       </div>
                   </div>
                   
-          <div class="col-md-6">
+                  <div class="col-md-6">
                   <div class="player-card__side player-card__side--back player-card__side--back-1">
                       <div class="player-card__cta">
                       <div class="card__price-box">
-                      <span class="game-details game-details--stats">PTS: ${data[i].pointspergame} REB: ${data[i].rebounds} AST: ${data[i].assists} <br><br> </span>
+                      <span class="game-details game-details--stats">PTS: ${data[i].pointspergame} <br> REB: ${data[i].rebounds} <br> AST: ${data[i].assists} <br> STL: ${data[i].steals} <br> BLK: ${data[i].blocks} <br> FG%: ${data[i].fieldgoal} <br> 3PT%: ${data[i].threepoint} <br> FT% ${data[i].freethrowpercent} <br> OVERALL: ${data[i].overallstats} <br><br> </span>
                       <span class="game-details game-details--icon"><i class="fas fa-basketball-ball fa-4x icon-back"></i></span>
                   </div>
                       </div>
-                  </div>
-              </div>
-              </div>
-              </div>
-          </div>
       `);
     $(".available").append(card);
   }
