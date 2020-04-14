@@ -1,8 +1,8 @@
-    // GET route for games from game database
-    $.get("/api/games", (data) => {
-        if (data.length !== 0) {
-        for (var i = 0; i < data.length; i++) {
-            let card = $(`
+// GET route for games from game database
+$.get("/api/games", (data) => {
+  if (data.length !== 0) {
+    for (var i = 0; i < data.length; i++) {
+      let card = $(`
             <div class="col-1-of-2">
             <button class="remove btn btn-danger" data-id="${data[i].id}">Delete</button>
                 <div class="game-card">
@@ -62,27 +62,26 @@
                 
             </div>
             `);
-            $(".games-container").prepend(card);
-        }
-        }
+      $(".games-container").prepend(card);
+    }
+  }
+});
+
+$(".games-container").on("click",".remove", function(event) {
+  event.preventDefault();
+  const id = $(event.target).data("id");
+  console.log(id);
+  $.ajax({
+    method: "DELETE",
+    url: "/api/games/" + id
+  })
+    .done(function(response) {
+
+      window.location.reload();
     });
 
-    $(".games-container").on("click",".remove", function(event) {
-        event.preventDefault();
-        const id = $(event.target).data("id");
-        console.log(id);
-        $.ajax({
-            method: "DELETE",
-            url: "/api/games/" + id
-          })
-            .done(function(response) {
-                
-            window.location.reload();
-            });
-            
-    })
+});
 
 
 
 
- 

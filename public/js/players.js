@@ -1,9 +1,9 @@
 
 // GET route for registered players from users database
 $.get("/api/all", (data) => {
-    if (data.length !== 0) {
-        for (var i = 0; i < data.length; i++) {
-        let card = $(`
+  if (data.length !== 0) {
+    for (var i = 0; i < data.length; i++) {
+      let card = $(`
         <div class="player-div">
             <div class="col-md-6">
             <button type="submit" class="addbtn  btn btn-primary data-id="${data[i].id}"><i class="fas fa-plus"></i></button>
@@ -32,67 +32,66 @@ $.get("/api/all", (data) => {
                 </div>
             </div>
         `);
-         $(".available").append(card);
-        //  $(".developer-container").prepend(card);
-        }
+      $(".available").append(card);
+      //  $(".developer-container").prepend(card);
     }
-    });
+  }
+});
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 ////  READY TO EAT ////////////////
 $(".available").on("click", ".addbtn", function(event) {
-event.preventDefault();
-console.log("this was clicked");
-// let addplayer =  $(`
-// <p>something</p>`);
-let addplayer = $(event.target).closest(".player-div");
-const id = $(event.target).data("id");
-$.ajax({
+  event.preventDefault();
+  console.log("this was clicked");
+  // let addplayer =  $(`
+  // <p>something</p>`);
+  let addplayer = $(event.target).closest(".player-div");
+  const id = $(event.target).data("id");
+  $.ajax({
     method: "PUT",
     url: "/api/players/" + id
   })
     .then(function(response) {
       $(".addedPlayers").append(addplayer);
-        console.log("response", response);
-       //window.location.reload();
+      console.log("response", response);
+      //window.location.reload();
     });
-})
+});
 //// DEVOURED /////////////////////////
 $(".addedPlayers").on("click", ".removebtn", function(event) {
-event.preventDefault();
-console.log("this was clicked");
-// let addplayer =  $(`
-// <p>something</p>`);
-let removeplayer = $(event.target).closest(".player-div");
-const id = $(event.target).data("id");
-$.ajax({
+  event.preventDefault();
+  console.log("this was clicked");
+  // let addplayer =  $(`
+  // <p>something</p>`);
+  let removeplayer = $(event.target).closest(".player-div");
+  const id = $(event.target).data("id");
+  $.ajax({
     method: "PUT",
     url: "/api/players/" + id
   })
     .then(function(response) {
       $(".available").append(removeplayer);
-        console.log("response", response);
-       //window.location.reload();
+      console.log("response", response);
+      //window.location.reload();
     });
-})
-///////////////////////////////////////////////////////////////////////////////////////////////////   
-    // $(".players-container").on("click", ".delete", function(event) {
-    //     event.preventDefault();
-    //     console.log("delete button clicked");
-    //     const id = $(event.target).data("id");
-    //     $.ajax({
-    //         method: "DELETE",
-    //         url: "/api/players/" + id
-    //       })
-    //         .done(function(response) {
-    //           //getPosts(postCategorySelect.val());
-    //             console.log("response", response);
-    //             location.reload();
-    //         });
-    // })
+});
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// $(".players-container").on("click", ".delete", function(event) {
+//     event.preventDefault();
+//     console.log("delete button clicked");
+//     const id = $(event.target).data("id");
+//     $.ajax({
+//         method: "DELETE",
+//         url: "/api/players/" + id
+//       })
+//         .done(function(response) {
+//           //getPosts(postCategorySelect.val());
+//             console.log("response", response);
+//             location.reload();
+//         });
+// })
 
 
 
 
 
 
-              
