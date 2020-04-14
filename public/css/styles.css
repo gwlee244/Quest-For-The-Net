@@ -1,47 +1,7 @@
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem); }
-  /* 80% {
-        transform: translateX(10px);
-    } */
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem); }
-  /* 80% {
-        transform: translateX(-10px);
-    } */
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-@keyframes moveInTop {
-  0% {
-    opacity: 0;
-    transform: translateY(-6rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(6rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
+/* Starting of the css file */
+/*This resets all browser default values te every single element to whatever we set here.*/
+/*Learning Source-1 ==> https://medium.com/@guntherWebDev/writing-good-css-4da31f84aaa2*/
+/*Learning Source-2 ==> https://www.udemy.com/course/advanced-css-and-sass/*/
 *,
 *::after,
 *::before {
@@ -49,6 +9,8 @@
   padding: 0;
   box-sizing: inherit; }
 
+/* Setting-up the default font-size as percentage. So that we use 
+   em it will calculate the usnit based of the parent size */
 html {
   font-size: 62.5%; }
   @media (max-width: 75em) {
@@ -61,6 +23,7 @@ html {
     html {
       font-size: 75%; } }
 
+/* css for body starts below */
 body {
   box-sizing: border-box;
   padding: 3rem; }
@@ -83,32 +46,33 @@ body {
 .heading-title {
   color: white;
   text-transform: uppercase;
-  /* Shaking animation bug fix */
   backface-visibility: hidden;
   margin-bottom: 3rem; }
-  .heading-title-main {
-    display: block;
-    width: 100%;
-    font-size: 11rem;
-    font-weight: 700;
-    letter-spacing: -.4rem;
-    animation: moveInTop 1.5s ease-out .75s;
-    animation-fill-mode: backwards;
-    line-height: 10rem;
-    text-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.8);
-    /* animation-iteration-count: 3; */
-    /* animation-delay: 3s; */ }
-    @media (max-width: 37.5em) {
-      .heading-title-main {
-        letter-spacing: -.2rem;
-        font-size: 9rem;
-        line-height: 7.5rem;
-        text-align: center; } }
-  
-  .heading-title:hover {
-    transform: skewY(1deg) skewX(3deg) scale(1.1);
-    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
+  /*Css for the title of oyr project "Quest for the nest" */
+.heading-title-main {
+  display: block;
+  width: 100%;
+  font-size: 11rem;
+  font-weight: 700;
+  letter-spacing: -.4rem;
+  animation: moveInTop 1.5s ease-out .75s;
+  animation-fill-mode: backwards;
+  line-height: 10rem;
+  text-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.8);
+   }
+  @media (max-width: 37.5em) {
+.heading-title-main {
+  letter-spacing: -.2rem;
+  font-size: 9rem;
+  line-height: 7.5rem;
+  text-align: center; } }
+  
+.heading-title:hover {
+  transform: skewY(1deg) skewX(3deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }  
+
+/* css for the nav bar buttons */
 .btn-click, .btn-click:link, .btn-click:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -125,55 +89,45 @@ body {
 .btn-click:hover {
   transform: translateY(-3px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-  /* x, y, blur */ }
+  }
 
 .btn-click:active, .btn-click:focus {
   outline: none;
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
-.btn--white {
-  background-color: #fff;
-  color: #777; }
-  .btn--white::after {
-    background-color: #fff; }
 
-.btn--green {
-  background-color: #55c57a;
-  color: #fff; }
-  .btn--green::after {
-    background-color: #55c57a; }
-
+/* Css for the main buttons we have in our app */
 .btn--header {
   display: block !important;
   width: 100%;
   color: white;
   animation: moveInBottom 1.5s ease; }
-  .btn--header::after {
-    background-color: #007CC2; }
+.btn--header::after {
+  background-color: #007CC2; }
 
-  .btn--form {
-    display: block !important;
-    width: 80%;
-    margin: 0 auto;
-    background-color: #000;
-    color: #fff;
-    font-weight: bold; }
+.btn--form {
+  display: block !important;
+  width: 80%;
+  margin: 0 auto;
+  background-color: #000;
+  color: #fff;
+  font-weight: bold; }
 
 .btn--blue {
   background-color: #007CC2;
   color: white;
   animation: moveInBottom 1.5s ease; }
-  .btn--blue::after {
-    background-color: #007CC2; }
+.btn--blue::after {
+  background-color: #007CC2; }
 
 .btn-color {
   background-color: transparent;
   color: white; }
-  .btn-color:hover {
-    background-image: linear-gradient(to right, #007CC2, #fdaf1d); }
-  .btn-color::after {
-    background-image: linear-gradient(to right, #007CC2, #fdaf1d); }
+.btn-color:hover {
+  background-image: linear-gradient(to right, #007CC2, #fdaf1d); }
+.btn-color::after {
+  background-image: linear-gradient(to right, #007CC2, #fdaf1d); }
 
 .btn::after {
   content: "";
@@ -189,7 +143,6 @@ body {
 
 .btn--animated {
   animation: moveInBottom 1.5s ease-out .75s;
-  /* class speed type delay */
   animation-fill-mode: backwards; }
 
 .btn-text:link, .btn-text:visited {
@@ -211,25 +164,8 @@ body {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   transform: translateY(0); }
 
-.feature-box {
-  font-size: 2.5rem;
-  color: #fff;
-  padding: 2.5rem;
-  text-align: center;
-  border-radius: 3px;
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-  transition: transform .3s; }
-  .feature-box__icon {
-    font-size: 6rem;
-    margin-bottom: .5rem;
-    display: inline-block;
-    background-image: linear-gradient(to right, #7ed56f, #28b485);
-    -webkit-background-clip: text;
-    color: transparent; }
-  .feature-box:hover {
-    transform: translateY(-1.5rem) scale(1.03); }
-
-.form__group:not(:last-child) {
+/* css for the form and form input */
+.form-group:not(:last-child) {
   margin-bottom: 2rem; }
 
 .form__input {
@@ -237,7 +173,7 @@ body {
   font-family: inherit;
   font-size: 1.7rem;
   padding: 1rem 2rem;
-  border-radius: 2px;
+  border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.5);
   border: none;
   border-bottom: 3px solid transparent;
@@ -273,6 +209,7 @@ body {
   visibility: hidden;
   transform: translateY(-4rem); }
 
+  /* css for the game card */
 .game-card {
   perspective: 150rem;
   -moz-perspective: 150rem;
@@ -280,123 +217,124 @@ body {
   height: 25rem;
   margin-bottom: 3rem;
   z-index: 1000; }
-  .game-card__side {
-    font-size: 2rem;
-    height: 25rem;
-    transition: all .8s ease;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 80%;
-    backface-visibility: hidden;
-    border-radius: 3px;
-    overflow: hidden;
-    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15); }
-    .game-card__side--front {
-      background-color: #202020; }
-    .game-card__side--back {
-      transform: rotateY(180deg); }
-      .game-card__side--back-1 {
-        background-image: linear-gradient(to right bottom, #25abf8, #55c57a); }
+.game-card__side {
+  font-size: 2rem;
+  height: 25rem;
+  transition: all .8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  backface-visibility: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15); }
+  .game-card__side--front {
+  background-color: #202020; }
+  .game-card__side--back {
+  transform: rotateY(180deg); }
+  .game-card__side--back-1 {
+    background-image: linear-gradient(to right bottom, #25abf8, #55c57a); }
   .game-card:hover .game-card__side--front {
-    transform: rotateY(-180deg); }
+  transform: rotateY(-180deg); }
   .game-card:hover .game-card__side--back {
-    transform: rotateX(0); }
+  transform: rotateX(0); }
   .game-card__picture {
-    float: left;
-    width: 30%;
-    height: 100%; }
-    .game-card__picture--1 {
-      height: 100%;
-      background-image: url(../img/game-background-03.jpg);
-      background-size: cover;
-      background-position: center; }
+  float: left;
+  width: 30%;
+  height: 100%; }
+  .game-card__picture--1 {
+  height: 100%;
+  background-image: url(../img/game-background-03.jpg);
+  background-size: cover;
+  background-position: center; }
 
       
-  .game-card__heading {
-    font-size: 2.8rem;
-    font-weight: 300;
-    text-transform: uppercase;
-    text-align: left;
-    color: #fff;
-    position: absolute;
-    top: 15rem;
-    left: 2rem;
-    width: 75%; }
-  .game-card__heading-span {
-    padding: 1rem 1.5rem;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone; }
-    .game-card__heading-span--1 {
-      background-color: #ffb900; }
-  .game-card__game-details {
-    width: 70%;
-    height: 100%;
-    float: left;
-    padding: 3rem;
-    text-transform: uppercase; }
-    .game-card__game-details--button-top {
-      height: 5rem;
-      width: 70%;
-      background-color: transparent;
-      position: absolute;
-      top: 0;
-      left: 0;
-      text-align: center;
-      color: #fff;
-      line-height: 3.5rem;
-      padding-top: 4rem; }
-    .game-card__game-details--button-bottom {
-      height: 5rem;
-      width: 70%;
-      background-image: linear-gradient(to right, #007CC2, #55c57a);
-      position: absolute;
-      bottom: 0;
-      left: 0; }
-  .game-card__container {
-    position: relative;
-    top: 40%;
-    left: 52%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    line-height: 4rem;
-    margin: 0 auto; }
-  .game-card__details {
-    width: 75%;
-    padding: 2rem;
-    float: left; }
-    .game-card__details ul {
-      list-style: none;
-      width: 80%;
-      margin: 0 auto; }
-      .game-card__details ul li {
-        text-align: left;
-        font-size: 1.5rem;
-        font-weight: 200;
-        padding: 1rem;
-        color: #fff;
-        text-transform: uppercase;
-        letter-spacing: .3rem; }
-        .game-card__details ul li:not(:last-child) {
-          border-bottom: 1px solid #eee; }
-  .game-card__cta {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    text-align: center; }
-  .game-card__price-box {
-    text-align: center;
-    margin-bottom: 1rem;
-    color: #fff; }
-  .game-card__price-only {
-    font-size: 1.4rem;
-    text-transform: uppercase; }
-  .game-card__price-value {
-    font-size: 6rem;
-    font-weight: 100; }
+.game-card__heading {
+  font-size: 2.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: left;
+  color: #fff;
+  position: absolute;
+  top: 15rem;
+  left: 2rem;
+  width: 75%; }
+.game-card__heading-span {
+  padding: 1rem 1.5rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone; }
+.game-card__heading-span--1 {
+  background-color: #ffb900; }
+.game-card__game-details {
+  width: 70%;
+  height: 100%;
+  float: left;
+  padding: 3rem;
+  text-transform: uppercase; }
+.game-card__game-details--button-top {
+  height: 5rem;
+  width: 70%;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  color: #fff;
+  line-height: 3.5rem;
+  padding-top: 4rem; }
+.game-card__game-details--button-bottom {
+  height: 5rem;
+  width: 70%;
+  background-image: linear-gradient(to right, #007CC2, #55c57a);
+  position: absolute;
+  bottom: 0;
+  left: 0; }
+.game-card__container {
+  position: relative;
+  top: 40%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 4rem;
+  margin: 0 auto; }
+.game-card__details {
+  width: 75%;
+  padding: 2rem;
+  float: left; }
+.game-card__details ul {
+  list-style: none;
+  width: 80%;
+  margin: 0 auto; }
+.game-card__details ul li {
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 200;
+  padding: 1rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: .3rem; }
+.game-card__details ul li:not(:last-child) {
+  border-bottom: 1px solid #eee; }
+.game-card__cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  text-align: center; }
+.game-card__price-box {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #fff; }
+.game-card__price-only {
+  font-size: 1.4rem;
+  text-transform: uppercase; }
+.game-card__price-value {
+  font-size: 6rem;
+  font-weight: 100; }
 
+  /* css for the player card */
 .player-card {
   perspective: 150rem;
   -moz-perspective: 150rem;
@@ -405,94 +343,95 @@ body {
   margin-bottom: 4.5rem;
   z-index: 1000; }
   @media (max-width: 37.5em) {
-    .player-card {
-      height: 38rem; } }
-  .player-card__side {
-    font-size: 2rem;
-    height: 38rem;
-    transition: all .8s ease;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    backface-visibility: hidden;
-    border-radius: 3px;
-    overflow: hidden;
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
-    @media (max-width: 37.5em) {
-      .player-card__side {
-        height: 40rem; } }
-    .player-card__side--front {
-      background-color: #202020; }
-    .player-card__side--back {
-      transform: rotateY(180deg); }
-      .player-card__side--back-1 {
-        width: 22rem;
-        background-image: linear-gradient(to right bottom, #25abf8, #55c57a); }
-  .player-card:hover .player-card__side--front {
-    transform: rotateY(-180deg); }
-  .player-card:hover .player-card__side--back {
-    transform: rotateY(0); }
-  .player-card__picture {
-    background-size: cover;
-    height: 30rem;
-    background-position: center;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px; }
-    @media (max-width: 37.5em) {
-      .player-card__picture {
-        background-position: top;
-        height: 30rem; } }
-    .player-card__picture--1 {
-      background-image: url(../../img/nbalogo.jpg); }
+.player-card {
+  height: 38rem; } }
+.player-card__side {
+  font-size: 2rem;
+  height: 38rem;
+  transition: all .8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+  @media (max-width: 37.5em) {
+.player-card__side {
+  height: 40rem; } }
+.player-card__side--front {
+  background-color: #202020; }
+.player-card__side--back {
+  transform: rotateY(180deg); }
+.player-card__side--back-1 {
+  width: 22rem;
+  background-image: linear-gradient(to right bottom, #25abf8, #55c57a); }
+.player-card:hover .player-card__side--front {
+  transform: rotateY(-180deg); }
+.player-card:hover .player-card__side--back {
+  transform: rotateY(0); }
+.player-card__picture {
+  background-size: cover;
+  height: 30rem;
+  background-position: center;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px; }
+  @media (max-width: 37.5em) {
+.player-card__picture {
+  background-position: top;
+  height: 30rem; } }
+.player-card__picture--1 {
+  background-image: url(../../img/nbalogo.jpg); }
 
    
-  .player-card__heading {
-    font-size: 2.8rem;
-    font-weight: 300;
-    text-transform: uppercase;
-    text-align: right;
-    color: #fff;
-    position: absolute;
-    top: 25rem;
-    right: 2rem;
-    width: 75%; }
-  .player-card__heading-span {
-    padding: 1rem 1.5rem;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone; }
-    .player-card__heading-span--1 {
-      background-color: #ffb900; }
-  .player-card__details {
-    padding: 3rem; }
-    .player-card__details ul {
-      list-style: none;
-      width: 80%;
-      margin: 0 auto; }
-      .player-card__details ul li {
-        text-align: center;
-        font-size: 1.5rem;
-        padding: 1rem; }
-        .player-card__details ul li:not(:last-child) {
-          border-bottom: 1px solid #eee; }
-  .player-card__cta {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    text-align: center; }
-  .player-card__price-box {
-    text-align: center;
-    margin-bottom: 8rem;
-    color: #fff; }
-  .player-card__price-only {
-    font-size: 1.4rem;
-    text-transform: uppercase; }
-  .player-card__price-value {
-    font-size: 6rem;
-    font-weight: 100; }
+.player-card__heading {
+  font-size: 2.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: right;
+  color: #fff;
+  position: absolute;
+  top: 25rem;
+  right: 2rem;
+  width: 75%; }
+.player-card__heading-span {
+  padding: 1rem 1.5rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone; }
+  .player-card__heading-span--1 {
+    background-color: #ffb900; }
+.player-card__details {
+  padding: 3rem; }
+.player-card__details ul {
+  list-style: none;
+  width: 80%;
+  margin: 0 auto; }
+.player-card__details ul li {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem; }
+.player-card__details ul li:not(:last-child) {
+  border-bottom: 1px solid #eee; }
+.player-card__cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  text-align: center; }
+.player-card__price-box {
+  text-align: center;
+  margin-bottom: 8rem;
+  color: #fff; }
+.player-card__price-only {
+  font-size: 1.4rem;
+  text-transform: uppercase; }
+.player-card__price-value {
+  font-size: 6rem;
+  font-weight: 100; }
 
+  /* css for the pop form for login registeration and creating a match */
 .popup {
   height: 100vh;
   width: 100%;
@@ -504,28 +443,28 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: all .3s; }
-  .popup:target {
-    opacity: 1;
-    visibility: visible; }
-  .popup__close:link, .popup__close:visited {
-    color: #fff;
-    position: absolute;
-    top: 2.5rem;
-    right: 2.5rem;
-    font-size: 6rem;
-    text-decoration: none;
-    display: inline-block;
-    transition: all .2s;
-    line-height: 1rem; }
-  .popup__close:hover {
-    color: #000; }
-  .popup-content {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 5rem;
-    width: 70%;
+.popup:target {
+  opacity: 1;
+  visibility: visible; }
+.popup__close:link, .popup__close:visited {
+  color: #fff;
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  font-size: 6rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all .2s;
+  line-height: 1rem; }
+.popup__close:hover {
+  color: #000; }
+.popup-content {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5rem;
+  width: 70%;
     
     background-image: linear-gradient(to right bottom, #25abf8, #fdaf1d);
     box-shadow: 0 2rem 4rem black;
@@ -567,81 +506,85 @@ body {
     @media (max-width: 37.5em) {
       .row [class^="col-"] {
         width: 100% !important; } }
-
-        .row .col-1-of-1 {
-          width: calc((100% - 4rem)); }
-        .row .col-1-of-2 {
-          width: calc((100% - 4rem) / 2); }
-        .row .col-1-of-3 {
-          width: calc((100% - 2 * 4rem) / 3); }
-        .row .col-2-of-3 {
-          width: calc(2 * ((100% - 2 * 4rem) / 3) + 4rem); }
-        .row .col-1-of-4 {
-          width: calc((100% - 3 * 4rem) / 4); }
-        .row .col-2-of-4 {
-          width: calc(2 * ((100% - 3 * 4rem) / 4) + 4rem); }
-        .row .col-3-of-4 {
-          width: calc(3 * ((100% - 3 * 4rem) / 4) + 2 * 4rem); }
-  
+/* Using Css Ca() to do a simple math for different element classes name.
+ Learning source-1==> https://css-tricks.com/a-couple-of-use-cases-for-calc/
+ Using Css Ca() to do a simple math for different element classes name.
+ Learning source-2==> https://css-tricks.com/keep-math-in-the-css/ */
+.row .col-1-of-1 {
+  width: calc((100% - 4rem)); }
+.row .col-1-of-2 {
+  width: calc((100% - 4rem) / 2); }
+.row .col-1-of-3 {
+  width: calc((100% - 2 * 4rem) / 3); }
+.row .col-2-of-3 {
+  width: calc(2 * ((100% - 2 * 4rem) / 3) + 4rem); }
+.row .col-1-of-4 {
+  width: calc((100% - 3 * 4rem) / 4); }
+.row .col-2-of-4 {
+  width: calc(2 * ((100% - 3 * 4rem) / 4) + 4rem); }
+.row .col-3-of-4 {
+  width: calc(3 * ((100% - 3 * 4rem) / 4) + 2 * 4rem); }
+ 
+  /* css for the player container */
 .players-container {
   max-width: 100rem;
   margin: 0 auto; }
   @media (max-width: 56.25em) {
-    .players-container {
-      max-width: 50rem; } }
-  .players-container:not(:last-child) {
-    margin-bottom: 8rem; }
-    @media (max-width: 56.25em) {
-      .players-container:not(:last-child) {
-        margin-bottom: 6rem; } }
-  .players-container::after {
-    content: "";
-    display: table;
-    clear: both; }
-  .players-container [class^="col-"] {
-    float: left;
-    margin-right: 4rem; }
-    .players-container [class^="col-"]:nth-child(3n) {
-      margin-right: 0; }
-      @media (max-width: 56.25em) {
-        .players-container [class^="col-"]:nth-child(3n) {
-          margin-bottom: 6rem; } }
-    @media (max-width: 56.25em) {
-      .players-container [class^="col-"] {
-        width: 100% !important; } }
-  
+.players-container {
+  max-width: 50rem; } }
+.players-container:not(:last-child) {
+  margin-bottom: 8rem; }
+  @media (max-width: 56.25em) {
+.players-container:not(:last-child) {
+  margin-bottom: 6rem; } }
+.players-container::after {
+  content: "";
+  display: table;
+  clear: both; }
+.players-container [class^="col-"] {
+  float: left;
+  margin-right: 4rem; }
+.players-container [class^="col-"]:nth-child(3n) {
+  margin-right: 0; }
+  @media (max-width: 56.25em) {
+.players-container [class^="col-"]:nth-child(3n) {
+  margin-bottom: 6rem; } }
+  @media (max-width: 56.25em) {
+.players-container [class^="col-"] {
+  width: 100% !important; } }
 
+/* css for the game container */
 .games-container {
   max-width: 100rem;
   margin: 0 auto; }
   @media (max-width: 56.25em) {
-    .games-container {
-      max-width: 50rem; } }
-  .games-container:not(:last-child) {
-    margin-bottom: 8rem; }
-    @media (max-width: 56.25em) {
-      .games-container:not(:last-child) {
-        margin-bottom: 6rem; } }
-  .games-container::after {
-    content: "";
-    display: table;
-    clear: both; }
-  .games-container [class^="col-"] {
-    float: left;
-    margin-right: 2.5rem; }
-  .games-container .col-1-of-1 {
-    width: calc((100% - 2 * 4rem)); }
-  .games-container .col-1-of-2 {
-    width: calc((100% - 4rem) / 2); }
-    @media (max-width: 56.25em) {
-      .games-container .col-1-of-2 {
-        width: 100% !important; } }
-    .games-container .col-1-of-2:nth-child(2n) {
-      margin-right: 0; }
-  .games-container .col-1-of-3 {
-    width: calc((100% - 2 * 4rem) / 3); }
-    .games-container .col-1-of-3:nth-child(3n) {
-      margin-right: 0; }
+.games-container {
+  max-width: 50rem; } }
+.games-container:not(:last-child) {
+  margin-bottom: 8rem; }
+  @media (max-width: 56.25em) {
+.games-container:not(:last-child) {
+  margin-bottom: 6rem; } }
+.games-container::after {
+  content: "";
+  display: table;
+  clear: both; }
+.games-container [class^="col-"] {
+  float: left;
+  margin-right: 2.5rem; }
+.games-container .col-1-of-1 {
+  width: calc((100% - 2 * 4rem)); }
+.games-container .col-1-of-2 {
+  width: calc((100% - 4rem) / 2); }
+  @media (max-width: 56.25em) {
+.games-container .col-1-of-2 {
+  width: 100% !important; } }
+.games-container .col-1-of-2:nth-child(2n) {
+  margin-right: 0; }
+.games-container .col-1-of-3 {
+  width: calc((100% - 2 * 4rem) / 3); }
+.games-container .col-1-of-3:nth-child(3n) {
+  margin-right: 0; }
 
 .header {
   height: 95vh;
@@ -709,7 +652,8 @@ body {
     border-bottom: 1px solid white; }
     .header__menu ul {
       list-style: none; }
-
+ 
+/* css for the navigation  menu */
 .index-navigation__menu {
   display: block;
   padding: 3rem;
@@ -758,6 +702,7 @@ body {
       top: 5rem;
       right: 5rem; } }
 
+/* css for the popup menu background */
 .popup-background {
   height: 4rem;
   width: 4rem;
@@ -777,6 +722,7 @@ body {
       top: 5rem;
       right: 5rem; } }
 
+/* css for the toggle button and the lists button contains with the background */
 .navigation-nav {
   height: 100vh;
   position: fixed;
@@ -859,6 +805,7 @@ body {
   top: 0;
   transform: rotate(-45deg); }
 
+  /* css for the navigation within our application */
 .page-navigation__menu {
   display: block;
   padding: 3rem;
@@ -895,6 +842,7 @@ body {
         width: 45%;
         display: inline-block; } }
 
+/*css for the section player  */
 .section-players {
   background-color: #000;
   padding: 5rem 0 5rem 0; }
@@ -925,6 +873,7 @@ body {
   background-image: linear-gradient(#000, #000);
   background-size: cover; }
 
+  /* css fro the section games */
 .section-games {
   background-color: #000;
   padding: 5rem 0 10rem 0; }
@@ -934,7 +883,7 @@ body {
   @media (max-width: 37.5em) {
     .section-games {
       padding: 0 0 10rem 0; } }
-
+/* css for the game header */
 .games-header {
   height: 95vh;
   background-color: black;
@@ -979,234 +928,269 @@ body {
       
     }
 
-     .game-details {
-      color: #fff;
-      text-transform: uppercase;
+.game-details {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  width: 100%; }
+.game-details--main {
+  color: #fff;
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: -.2rem; }
+.game-details--sub {
+  font-size: 1.1rem;
+  letter-spacing: .3rem;
+  padding-left: 1rem;
+  color: #777; }
+.game-details--icon {
+  font-size: 1.1rem;
+  letter-spacing: .3rem;
+  padding-left: 1rem; }
+.game-details--name {
+  font-size: 1.1rem;
+  letter-spacing: .3rem;
+  padding-left: 1rem; }
+  @media (max-width: 37.5em) {
+.game-details--name {
+  font-size: 1.8rem; } }
+.game-details--location {
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: -.1rem; }
+.icon {
+  color: #fff; }
+.icon-back {
+  color: #fff;
+  padding-top: 1.5rem; }
+.card-back-button{
+  padding: -5rem;
+  }
+.btn-danger{
+  background-color: white;
+  color: black;   
+  font-weight: 900;
+  letter-spacing: .1rem;
+  }
+
+#addedPlayers {
+  display: flex;
+  justify-content: flex-end;
+  }
+
+.btn-click-home, .btn-click-home:link, .btn-click-home:visited {
+  background-image: linear-gradient(to right, #828286, #f1fafa);
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem;
+  display: inline-block;
+  border-radius: 20rem;
+  transition: all .2s;
+  position: relative;
+  font-size: 1.4rem;
+  letter-spacing: .1rem;
+  border: none;
+  cursor: pointer; }
+        
+ .btn-click-home:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+ .team-players {
+    background-color: #000;
+    padding: 5rem 0 5rem 0; }
+    @media (max-width: 56.25em) {
+.team-players {
+  padding: 0 0 5rem 0; } }
+  @media (max-width: 37.5em) {
+ .team-players{
+  padding: 0 0 5rem 0; } }
+
+
+.developer-card {
+perspective: 150rem;
+-moz-perspective: 150rem;
+position: relative;
+height: 46rem;
+margin-bottom: 4.5rem;
+z-index: 1000; }
+@media (max-width: 37.5em) {
+  .developer-card {
+    height: 40rem; } }
+.developer-card__side {
+  font-size: 2rem;
+  height: 46rem;
+  transition: all .8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+  @media (max-width: 37.5em) {
+    .developer-card__side {
+      height: 40rem; } }
+  .developer-card__side--front {
+    background-color: #202020; }
+  .developer-card__side--back {
+    transform: rotateY(180deg); }
+    .developer-card__side--back-1 {
+      background-image: linear-gradient(to right bottom, #25abf8, #55c57a); }
+.developer-card:hover .developer-card__side--front {
+  transform: rotateY(-180deg); }
+.developer-card:hover .developer-card__side--back {
+  transform: rotateY(0); }
+.developer-card__picture {
+  background-size: cover;
+  height: 38rem;
+  background-position: center;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px; }
+  @media (max-width: 37.5em) {
+    .developer-card__picture {
+      background-position: top;
+      height: 30rem; } }
+  .developer-card__picture--1 {
+    background-image: url(../../img/player-profile-01.png); }
+.developer-card__heading {
+  font-size: 2.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: right;
+  color: #fff;
+  position: absolute;
+  top: 25rem;
+  right: 2rem;
+  width: 75%; }
+.developer-card__heading-span {
+  padding: 1rem 1.5rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone; }
+  .developer-card__heading-span--1 {
+    background-color: #ffb900; }
+.developer-card__details {
+  padding: 3rem; }
+  .developer-card__details ul {
+    list-style: none;
+    width: 80%;
+    margin: 0 auto; }
+    .developer-card__details ul li {
       text-align: center;
-      display: block;
-      width: 100%; }
-      .game-details--main {
-        color: #fff;
-        font-size: 5rem;
-        font-weight: 700;
-        letter-spacing: -.2rem; }
-      .game-details--sub {
-        font-size: 1.1rem;
-        letter-spacing: .3rem;
-        padding-left: 1rem;
-        color: #777; }
-      .game-details--icon {
-        font-size: 1.1rem;
-        letter-spacing: .3rem;
-        padding-left: 1rem; }
-      .game-details--name {
-        font-size: 1.1rem;
-        letter-spacing: .3rem;
-        padding-left: 1rem; }
-        @media (max-width: 37.5em) {
-          .game-details--name {
-            font-size: 1.8rem; } }
-      .game-details--location {
-        color: #fff;
-        font-size: 4rem;
-        font-weight: 700;
-        letter-spacing: -.1rem; }
+      font-size: 1.5rem;
+      padding: 1rem; }
+      .developer-card__details ul li:not(:last-child) {
+        border-bottom: 1px solid #eee; }
+.developer-card__cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  text-align: center; }
+.developer-card__price-box {
+  text-align: center;
+  margin-bottom: 8rem;
+  color: #fff; }
+.developer-card__price-only {
+  font-size: 1.4rem;
+  text-transform: uppercase; }
+.developer-card__price-value {
+  font-size: 6rem;
+  font-weight: 100; }
+
+
+.developer-container {
+  max-width: 100rem;
+  margin: 0 auto; }
+  @media (max-width: 56.25em) {
+.developer-container {
+  max-width: 50rem; } }
+.developer-container:not(:last-child) {
+  margin-bottom: 8rem; }
+  @media (max-width: 56.25em) {
+.developer-container:not(:last-child) {
+  margin-bottom: 6rem; } }
+.developer-container::after {
+  content: "";
+  display: table;
+  clear: both; }
+.developer-container [class^="col-"] {
+  float: left;
+  margin-right: 4rem; }
+.developer-container [class^="col-"]:nth-child(3n) {
+  margin-right: 0; }
+  @media (max-width: 56.25em) {
+.developer-container [class^="col-"]:nth-child(3n) {
+  margin-bottom: 6rem; } }
+  @media (max-width: 56.25em) {
+.developer-container [class^="col-"] {
+  width: 100% !important; } }
+.developer-container .col-1-of-3 {
+  width: calc((100% - 2 * 4rem) / 3); }
+
+/* This fix will fix the margin for player card */
+.fix{
+  margin: 20px !important;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  /* 80% {
+        transform: translateX(-10px);
+    } */
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-6rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(6rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+                
+
     
-    .icon {
-      color: #fff; }
-    
-    .icon-back {
-      color: #fff;
-      padding-top: 1.5rem; }
 
-      .card-back-button{
-        padding: -5rem;
-      }
-
-      .btn-danger{
-        background-color: white;
-        color: black;
-        
-       font-weight: 900;
-       letter-spacing: .1rem;
-      }
-
-      #addedPlayers {
-        display: flex;
-        justify-content: flex-end;
-      }
-
-      
-
-        .btn-click-home, .btn-click-home:link, .btn-click-home:visited {
-          background-image: linear-gradient(to right, #828286, #f1fafa);
-          text-transform: uppercase;
-          text-decoration: none;
-          padding: 1.5rem;
-          display: inline-block;
-          border-radius: 20rem;
-          transition: all .2s;
-          position: relative;
-          font-size: 1.4rem;
-          letter-spacing: .1rem;
-          border: none;
-          cursor: pointer; }
-        
-        .btn-click-home:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-         }
-
-         .team-players {
-          background-color: #000;
-          padding: 5rem 0 5rem 0; }
-          @media (max-width: 56.25em) {
-            .team-players {
-              padding: 0 0 5rem 0; } }
-          @media (max-width: 37.5em) {
-            .team-players{
-              padding: 0 0 5rem 0; } }
+  
+  
+  
+  
 
 
-              .developer-card {
-                perspective: 150rem;
-                -moz-perspective: 150rem;
-                position: relative;
-                height: 46rem;
-                margin-bottom: 4.5rem;
-                z-index: 1000; }
-                @media (max-width: 37.5em) {
-                  .developer-card {
-                    height: 40rem; } }
-                .developer-card__side {
-                  font-size: 2rem;
-                  height: 46rem;
-                  transition: all .8s ease;
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  width: 100%;
-                  backface-visibility: hidden;
-                  border-radius: 3px;
-                  overflow: hidden;
-                  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
-                  @media (max-width: 37.5em) {
-                    .developer-card__side {
-                      height: 40rem; } }
-                  .developer-card__side--front {
-                    background-color: #202020; }
-                  .developer-card__side--back {
-                    transform: rotateY(180deg); }
-                    .developer-card__side--back-1 {
-                      background-image: linear-gradient(to right bottom, #25abf8, #55c57a); }
-                .developer-card:hover .developer-card__side--front {
-                  transform: rotateY(-180deg); }
-                .developer-card:hover .developer-card__side--back {
-                  transform: rotateY(0); }
-                .developer-card__picture {
-                  background-size: cover;
-                  height: 38rem;
-                  background-position: center;
-                  border-top-left-radius: 3px;
-                  border-top-right-radius: 3px; }
-                  @media (max-width: 37.5em) {
-                    .developer-card__picture {
-                      background-position: top;
-                      height: 30rem; } }
-                  .developer-card__picture--1 {
-                    background-image: url(../../img/player-profile-01.png); }
-                .developer-card__heading {
-                  font-size: 2.8rem;
-                  font-weight: 300;
-                  text-transform: uppercase;
-                  text-align: right;
-                  color: #fff;
-                  position: absolute;
-                  top: 25rem;
-                  right: 2rem;
-                  width: 75%; }
-                .developer-card__heading-span {
-                  padding: 1rem 1.5rem;
-                  -webkit-box-decoration-break: clone;
-                  box-decoration-break: clone; }
-                  .developer-card__heading-span--1 {
-                    background-color: #ffb900; }
-                .developer-card__details {
-                  padding: 3rem; }
-                  .developer-card__details ul {
-                    list-style: none;
-                    width: 80%;
-                    margin: 0 auto; }
-                    .developer-card__details ul li {
-                      text-align: center;
-                      font-size: 1.5rem;
-                      padding: 1rem; }
-                      .developer-card__details ul li:not(:last-child) {
-                        border-bottom: 1px solid #eee; }
-                .developer-card__cta {
-                  position: absolute;
-                  top: 50%;
-                  left: 50%;
-                  transform: translate(-50%, -50%);
-                  width: 90%;
-                  text-align: center; }
-                .developer-card__price-box {
-                  text-align: center;
-                  margin-bottom: 8rem;
-                  color: #fff; }
-                .developer-card__price-only {
-                  font-size: 1.4rem;
-                  text-transform: uppercase; }
-                .developer-card__price-value {
-                  font-size: 6rem;
-                  font-weight: 100; }
 
 
-                  .developer-container {
-                    max-width: 100rem;
-                    margin: 0 auto; }
-                    @media (max-width: 56.25em) {
-                      .developer-container {
-                        max-width: 50rem; } }
-                    .developer-container:not(:last-child) {
-                      margin-bottom: 8rem; }
-                      @media (max-width: 56.25em) {
-                        .developer-container:not(:last-child) {
-                          margin-bottom: 6rem; } }
-                    .developer-container::after {
-                      content: "";
-                      display: table;
-                      clear: both; }
-                    .developer-container [class^="col-"] {
-                      float: left;
-                      margin-right: 4rem; }
-                      .developer-container [class^="col-"]:nth-child(3n) {
-                        margin-right: 0; }
-                        @media (max-width: 56.25em) {
-                          .developer-container [class^="col-"]:nth-child(3n) {
-                            margin-bottom: 6rem; } }
-                      @media (max-width: 56.25em) {
-                        .developer-container [class^="col-"] {
-                          width: 100% !important; } }
-                    .developer-container .col-1-of-3 {
-                      width: calc((100% - 2 * 4rem) / 3); }
 
-                      .fix{
-                        margin: 20px !important;
-                      }
 
-                     
-
-         
-
-        
-        
-        
-        
-      
-
-      
-
-     
-
-     

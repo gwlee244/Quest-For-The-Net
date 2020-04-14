@@ -2,11 +2,11 @@ var db = require("../models");
 var path = require("path");
 
 module.exports = function(app) {
-  
+
   app.get("/index", function(req, res) {
     res.sendFile(path.join(__dirname, "../views/index.hbs"));
   });
-  
+
   app.get("/games", function(req, res) {
     res.sendFile(path.join(__dirname, "../views/games.hbs"));
   });

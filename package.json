@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "lint": "eslint **/*.js --quiet",
-    "fix": "eslint --fix .",
+    "lint:fix": "eslint --fix --ext .js,.jsx .",
     "test": "npm run lint && NODE_ENV=test mocha -u tdd --reporter spec --exit",
     "compile:sass": "node-sass public/sass/main.scss public/css/styles.css -w"
   },

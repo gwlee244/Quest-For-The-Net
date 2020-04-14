@@ -1,5 +1,5 @@
 module.exports = (sequelize, Sequelize) => {
-  UserGame = sequelize.define('UserGame', {
+  UserGame = sequelize.define("UserGame", {
     "GameId": Sequelize.INTEGER,
     "UserId": Sequelize.INTEGER
   });
@@ -7,7 +7,7 @@ module.exports = (sequelize, Sequelize) => {
   UserGame.associate = (models) => {
     models.UserGame.belongsTo(models.User);
     models.UserGame.belongsTo(models.Game);
-  }
+  };
 
   UserGame.sync({ force:true });
   return UserGame;
