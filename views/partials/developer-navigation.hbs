@@ -1,86 +1,86 @@
-    <div class="page-navigation__menu">
-        {{#if isAuthenticated}}
-        <ul>
-            <li>
-                <span class="heading-main">weCode</span>
-            </li>
-            <li><a href="/games" class="btn-click btn-color">Games</a></li>
-            <li><a href="/index" class="btn-click btn-color">Home</a></li>
-        </ul>
-        {{/if}}
+  <div class="page-navigation__menu">
+      {{#if isAuthenticated}}
+      <ul>
+          <li>
+              <span class="heading-main">weCode</span>
+          </li>
+          <li><a href="/games" class="btn-click btn-color">Games</a></li>
+          <li><a href="/index" class="btn-click btn-color">Home</a></li>
+      </ul>
+      {{/if}}
 
-        {{#unless isAuthenticated}}
-        <ul>
-            <li>
-                <span class="heading-main">Players</span>
-            </li>
-            <li><a href="#popup" class="btn-click btn-color">Login</a></li>
-            <li><a href="/games" class="btn-click btn-color">Games</a></li>
-            <li><a href="/index" class="btn-click btn-color">Home</a></li>
-        </ul>
-        {{/unless}}
-    </div>
+      {{#unless isAuthenticated}}
+      <ul>
+          <li>
+              <span class="heading-main">weCode</span>
+          </li>
+          <li><a href="#popup" class="btn-click btn-color">Login</a></li>
+          <li><a href="/games" class="btn-click btn-color">Games</a></li>
+          <li><a href="/index" class="btn-click btn-color">Home</a></li>
+      </ul>
+      {{/unless}}
+  </div>
 
-     <div class="popup" id="popup">
-          <div class="popup-content">
-            {{#if isAuthenticated}}
-            
-            {{/if}}
+    <div class="popup" id="popup">
+        <div class="popup-content">
+          {{#if isAuthenticated}}
+          
+          {{/if}}
 
-            {{#unless isAuthenticated}}
+          {{#unless isAuthenticated}}
 
-              <div class="row">
-                <div class="col-1-of-2">
-                    <form id="signin" class="form" name="signin" method="post" action="signin">
-                    
-                    <div class="form-group">
-                        <label for="email" class="form__label" >Email</label>
-                        <input type="email" class="form__input text" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="password" class="form__label">Password</label>
-                        <input type="password" class="form__input" id="password" name="password" required>
-                    </div>
+            <div class="row">
+              <div class="col-1-of-2">
+                  <form id="signin" class="form" name="signin" method="post" action="signin">
+                  
+                  <div class="form-group">
+                      <label for="email" class="form__label" >Email</label>
+                      <input type="email" class="form__input text" id="email" name="email" required>
+                  </div>
+                  
+                  <div class="form-group">
+                      <label for="password" class="form__label">Password</label>
+                      <input type="password" class="form__input" id="password" name="password" required>
+                  </div>
 
-                    <input class="btn-click btn--form" type="submit" value="Login" />
+                  <input class="btn-click btn--form" type="submit" value="Login" />
 
-                    </form>
-                </div>
-                <div class="col-1-of-2">
-                    <form id="signup" name="signup" method="post" action="/signup">
-
-              <div class="form-group">
-                <label for="email" class="form__label">Email</label>
-                <input class="form__input" name="email" type="email" required/>
+                  </form>
               </div>
+              <div class="col-1-of-2">
+                  <form id="signup" name="signup" method="post" action="/signup">
 
-              <div class="form-group">
-                <label for="firstname" class="form__label">First name</label>
-                <input name="firstname" class="form__input" type="text" required />
-              </div>
+            <div class="form-group">
+              <label for="email" class="form__label">Email</label>
+              <input class="form__input" name="email" type="email" required/>
+            </div>
 
-              <div class="form-group">
-                <label for="lastname" class="form__label">Last name</label>
-                <input name="lastname" class="form__input" type="text" required/>
-              </div>
+            <div class="form-group">
+              <label for="firstname" class="form__label">First name</label>
+              <input name="firstname" class="form__input" type="text" required />
+            </div>
 
-              <div class="form-group">
-                <label for="password" class="form__label">Password</label>
-                <input name="password" class="form__input" type="password" required/>
-              </div>
-              
-              <input class="btn-click btn--form" type="submit" value="Register" />
+            <div class="form-group">
+              <label for="lastname" class="form__label">Last name</label>
+              <input name="lastname" class="form__input" type="text" required/>
+            </div>
 
-            </form>
-
-                    
-                </div>
+            <div class="form-group">
+              <label for="password" class="form__label">Password</label>
+              <input name="password" class="form__input" type="password" required/>
             </div>
             
-          
-            {{/unless}}
+            <input class="btn-click btn--form" type="submit" value="Register" />
 
-            <a href="#team-players" class="popup__close">&times;</a>
+          </form>
+
+                  
+              </div>
           </div>
+          
+        
+          {{/unless}}
+
+          <a href="#team-players" class="popup__close">&times;</a>
         </div>
+      </div>

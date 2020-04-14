@@ -1,72 +1,89 @@
 
-    <section class="section-games" id="section-games">
-      {{> game-navigation}}
-        <div class="popup" id="popup">
-          <div class="popup-content">
-            {{#if isAuthenticated}}
-            <form class="add-game" action="api/games" method="POST">
-            <div class="form-group">
-                <label for="date" class="form__label">Date</label>
-                <input type="date" class="form__input" id="date" name="date" placeholder="Date" required>
-            </div>
-            <div class="form-group">
-                <label for="time" class="form__label">Time</label>
-                <input type="time" class="form__input" id="time" name="time" placeholder="Time" required>
-            </div>
-            <div class="form-group">
-                <label for="location" class="form__label" >Location</label>
-                <input type="text" class="form__input" id="location" name="location" required>
-            </div>
-            <div class="form-group">
-                <label for="max_players" class="form__label">Number of players</label>
-                <input type="number" class="form__input" id="max_players" name="max_players" placeholder="8-12" required>
-            </div>
-            <input class="btn-click btn--form" type="submit" value="Create Game"  />
-            </form>
-            {{/if}}
-            {{#unless isAuthenticated}}
-            <div class="row">
-            <div class="col-1-of-2">
-                <form id="signin" class="form" name="signin" method="post" action="signin">
-                <div class="form-group">
-                <label for="email" class="form__label" >Email</label>
-                <input type="email" class="form__input text" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                <label for="password" class="form__label">Password</label>
-                <input type="password" class="form__input" id="password" name="password" required>
-                </div>
-                <input class="btn-click btn--form" type="submit" value="Login" />
-                    </form>
-             </div>
-             <div class="col-1-of-2">
-             <form id="signup" name="signup" method="post" action="/signup">
-                <div class="form-group">
-                <label for="email" class="form__label">Email</label>
-                <input class="form__input" name="email" type="email" required/>
-                </div>
-                <div class="form-group">
-                <label for="firstname" class="form__label">First name</label>
-                <input name="firstname" class="form__input" type="text" required />
-                </div>
-                <div class="form-group">
-                <label for="lastname" class="form__label">Last name</label>
-                <input name="lastname" class="form__input" type="text" required/>
-                </div>
-                <div class="form-group">
-                <label for="password" class="form__label">Password</label>
-                <input name="password" class="form__input" type="password" required/>
-                </div>
-                <input class="btn-click btn--form" type="submit" value="Register" />
-            </form>
-            </div>
-            </div>
-      {{/unless}}
-            <a href="#section-games" class="popup__close">&times;</a>
-            </div>
-            </div>
+  <section class="section-games" id="section-games">
+
+    {{> game-navigation}}
       
-      <div class="games-container">
-      {{!--Dumping our Ganes card inside game-conatiner--}}
+      <div class="popup" id="popup">
+        <div class="popup-content">
+          {{#if isAuthenticated}}
+          <form class="add-game" action="api/games" method="POST">
+          <div class="form-group">
+              <label for="date" class="form__label">Date</label>
+              <input type="date" class="form__input" id="date" name="date" placeholder="Date" required>
+          </div>
+          <div class="form-group">
+              <label for="time" class="form__label">Time</label>
+              <input type="time" class="form__input" id="time" name="time" placeholder="Time" required>
+          </div>
+          <div class="form-group">
+              <label for="location" class="form__label" >Location</label>
+              <input type="text" class="form__input" id="location" name="location" required>
+          </div>
+          <div class="form-group">
+              <label for="max_players" class="form__label">Number of players</label>
+              <input type="number" class="form__input" id="max_players" name="max_players" placeholder="8-12" required>
+            </div>
+
+            <input class="btn-click btn--form" type="submit" value="Create Game"  />
+
+          </form>
+          {{/if}}
+
+          {{#unless isAuthenticated}}
+          <div class="row">
+          <div class="col-1-of-2">
+              <form id="signin" class="form" name="signin" method="post" action="signin">
+              <div class="form-group">
+              <label for="email" class="form__label" >Email</label>
+              <input type="email" class="form__input text" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+              <label for="password" class="form__label">Password</label>
+              <input type="password" class="form__input" id="password" name="password" required>
+              </div>
+              <input class="btn-click btn--form" type="submit" value="Login" />
+                  </form>
+            </div>
+            <div class="col-1-of-2">
+            <form id="signup" name="signup" method="post" action="/signup">
+              <div class="form-group">
+              <label for="email" class="form__label">Email</label>
+              <input class="form__input" name="email" type="email" required/>
+              </div>
+              <div class="form-group">
+              <label for="firstname" class="form__label">First name</label>
+              <input name="firstname" class="form__input" type="text" required />
+              </div>
+              <div class="form-group">
+              <label for="lastname" class="form__label">Last name</label>
+              <input name="lastname" class="form__input" type="text" required/>
+              </div>
+              <div class="form-group">
+              <label for="password" class="form__label">Password</label>
+              <input name="password" class="form__input" type="password" required/>
+            </div>
+            
+            <input class="btn-click btn--form" type="submit" value="Register" />
+
+            
+
+          </form>
+
+            
+
+                  
+              </div>
+          </div>
+          
+        
+          {{/unless}}
+
+          <a href="#section-games" class="popup__close">&times;</a>
+        </div>
       </div>
-    </section>
+
+    <div class="games-container">
+      
+    </div>
+
+  </section>

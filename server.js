@@ -1,10 +1,11 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 let passport = require("passport");
 let session = require("express-session");
 let bodyParser = require("body-parser");
 let exphbs = require("express-handlebars");
-let PORT = process.env.PORT || 4000;
+let PORT = process.env.PORT || PORT;
 // BodyParser (Middleware)
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());

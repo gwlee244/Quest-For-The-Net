@@ -107,19 +107,9 @@ module.exports = (sequelize, Sequelize) => {
       defaultValue: 0
     },
 
-  },
-  {
+  },{
     timestamps: false
-  }
-  );
-
-    // Player.associate = (models) => {
-
-
-    //   models.Player.belongsTo(models.Game, {
-    //       through: models.UserGame
-
-
+  });
 
   Player.sync();
   return Player;
