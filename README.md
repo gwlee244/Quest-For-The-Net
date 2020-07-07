@@ -37,7 +37,6 @@ Implement test that are excetable to check our classes output
 
 **Gene Lee**
 - Github : [@gwlee244](https://github.com/gwlee244)
- minor change:  
 
 ## License 
 MIT: ![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)
